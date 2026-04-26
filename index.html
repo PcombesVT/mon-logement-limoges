@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Logement Limoges — Location appartements, maisons & logements à Limoges | Begip</title>
+  <meta name="description" content="Trouvez votre logement à Limoges avec Begip : appartements T2, T3, T4 et maisons à louer dans le centre-ville, les quartiers résidentiels et l'agglomération de Limoges. 30 ans d'expérience locale." />
+  <meta name="keywords" content="logement Limoges, location appartement Limoges, T2 Limoges, T3 Limoges, T4 Limoges, maison location Limoges, Begip Limoges, agence immobilière Limoges, location Haute-Vienne" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* ── Charte "Verdure & Pierre" ── */
+      --sage: #3d5a4a;             /* Vert sauge profond — couleur principale */
+      --sage-deep: #2d4438;        /* Vert sauge foncé */
+      --sage-light: #5a7d6b;       /* Vert sauge clair */
+      --sage-mist: #c8d4ca;        /* Vert sauge très pâle */
+      --ocre: #c8a16a;             /* Ocre / terre cuite douce — accent */
+      --ocre-light: #e0bf8f;       /* Ocre clair */
+      --ocre-deep: #a37e4a;        /* Ocre profond */
+      --stone: #f5f0e6;            /* Crème pierre — fond principal */
+      --stone-warm: #ece4d4;       /* Crème pierre chaud */
+      --stone-soft: #faf6ee;       /* Crème pierre très clair */
+      --ink: #1f2520;              /* Texte principal */
+      --ink-soft: #3d4540;         /* Texte secondaire */
+      --muted: #6b7066;            /* Texte muet */
+      --line: rgba(61, 90, 74, 0.15);
+      --radius: 6px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--stone);
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { animation: fadeUp .8s both; }
+
+    /* ═══════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 56px;
+      background: rgba(45, 68, 56, .96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(200, 161, 106, .15);
+    }
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.005em;
+      white-space: nowrap;
+    }
+    .nav-logo span { color: #ffffff; }
+    .nav-logo em { margin: 0 4px; }
+    .nav-logo em {
+      color: var(--ocre-light);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.92em;
+    }
+    .nav-right { display: flex; align-items: center; gap: 36px; }
+    .nav-link {
+      color: rgba(245, 240, 230, 0.72);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color .25s;
+    }
+    .nav-link:hover { color: var(--ocre-light); }
+
+    /* Dropdown sites partenaires */
+    .nav-dropdown { position: relative; display: inline-block; }
+    .nav-dropdown-trigger {
+      background: none; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(245, 240, 230, 0.72); padding: 0;
+      transition: color .25s;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-weight: 500;
+    }
+    .nav-dropdown-trigger:hover { color: var(--ocre-light); }
+    .nav-caret { font-size: .9em; transition: transform .25s; }
+    .nav-dropdown.open .nav-caret { transform: rotate(180deg); }
+    .nav-dropdown-menu {
+      position: absolute; top: calc(100% + 14px); right: 0;
+      background: rgba(31, 37, 32, .98);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(200, 161, 106, .25);
+      border-radius: 4px;
+      padding: 10px 0;
+      min-width: 280px;
+      opacity: 0; visibility: hidden;
+      transform: translateY(-8px);
+      transition: opacity .2s, visibility .2s, transform .25s;
+      z-index: 200;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .4);
+    }
+    .nav-dropdown.open .nav-dropdown-menu {
+      opacity: 1; visibility: visible;
+      transform: translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 11px 22px;
+      color: rgba(245, 240, 230, 0.78);
+      text-decoration: none;
+      font-family: 'Fraunces', serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background .2s, color .2s;
+    }
+    .nav-dropdown-menu a:hover {
+      background: rgba(200, 161, 106, .1);
+      color: var(--ocre-light);
+    }
+
+    .nav-cta {
+      background: var(--ocre);
+      color: var(--sage-deep) !important;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      letter-spacing: 0.06em !important;
+      font-size: 0.74rem !important;
+      transition: background .25s, transform .15s !important;
+    }
+    .nav-cta:hover { background: var(--ocre-light) !important; transform: translateY(-1px); }
+
+    /* ═══════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(165deg, var(--sage-deep) 0%, var(--sage) 60%, var(--sage-light) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 130px 56px 90px;
+    }
+
+    /* Décoration : motif pierre / botanique discret */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 45%;
+      background-image:
+        repeating-linear-gradient(135deg, transparent 0 80px, rgba(200, 161, 106, 0.04) 80px 81px);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 50%; right: 6%;
+      width: 420px; height: 420px;
+      border: 1px solid rgba(200, 161, 106, .25);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ocre-light);
+      margin-bottom: 36px;
+      font-weight: 500;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 48px; height: 1px;
+      background: var(--ocre-light);
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--stone-soft);
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--ocre-light);
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: rgba(245, 240, 230, 0.82);
+      max-width: 580px;
+      margin-bottom: 44px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--ocre);
+      color: var(--sage-deep);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background .25s, transform .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-primary:hover {
+      background: var(--ocre-light);
+      transform: translateY(-2px);
+    }
+    .btn-primary::after { content: '→'; font-size: 1.1em; }
+
+    .btn-ghost {
+      border: 1px solid rgba(245, 240, 230, 0.3);
+      color: rgba(245, 240, 230, 0.92);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all .25s;
+    }
+    .btn-ghost:hover {
+      border-color: var(--ocre-light);
+      color: var(--ocre-light);
+    }
+
+    /* Hero card — recherche par type */
+    .hero-card {
+      background: rgba(245, 240, 230, .05);
+      border: 1px solid rgba(200, 161, 106, .25);
+      border-radius: 4px;
+      padding: 40px 36px;
+      backdrop-filter: blur(8px);
+      position: relative;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px;
+      width: 40px; height: 40px;
+      border-top: 2px solid var(--ocre);
+      border-left: 2px solid var(--ocre);
+    }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; right: -1px;
+      width: 40px; height: 40px;
+      border-bottom: 2px solid var(--ocre);
+      border-right: 2px solid var(--ocre);
+    }
+
+    .hero-card-title {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: var(--ocre-light);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .type-card {
+      background: rgba(245, 240, 230, .06);
+      border: 1px solid rgba(200, 161, 106, .15);
+      border-radius: 4px;
+      padding: 18px 16px;
+      text-decoration: none;
+      transition: background .2s, border-color .2s, transform .2s;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .type-card:hover {
+      background: rgba(200, 161, 106, .12);
+      border-color: rgba(200, 161, 106, .4);
+      transform: translateY(-2px);
+    }
+    .type-card .type-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--stone-soft);
+    }
+    .type-card .type-sub {
+      font-size: 0.74rem;
+      color: rgba(245, 240, 230, 0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTIONS GÉNÉRIQUES
+       ═══════════════════════════════════════════════ */
+    section {
+      padding: 130px 56px;
+      position: relative;
+    }
+    .section-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ocre-deep);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .section-tag::before {
+      content: '';
+      width: 32px; height: 1px;
+      background: var(--ocre-deep);
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--sage-deep);
+      margin-bottom: 24px;
+      letter-spacing: -0.015em;
+    }
+    h2 em {
+      font-style: italic;
+      color: var(--ocre-deep);
+      font-weight: 500;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 72px;
+      font-weight: 300;
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTION TYPES DE LOGEMENTS
+       ═══════════════════════════════════════════════ */
+    .types-section {
+      background: var(--stone-soft);
+    }
+
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .logement-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform .4s, box-shadow .4s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .logement-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 56px rgba(45, 68, 56, .14);
+    }
+
+    .logement-header {
+      padding: 32px 32px 24px;
+      background: linear-gradient(135deg, var(--sage-deep) 0%, var(--sage) 100%);
+      color: var(--stone-soft);
+      position: relative;
+    }
+    .logement-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 32px; right: 32px;
+      height: 1px;
+      background: var(--ocre);
+    }
+    .logement-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--ocre-light);
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .logement-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.7rem;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .logement-tagline {
+      font-size: 0.82rem;
+      color: rgba(245, 240, 230, 0.7);
+      letter-spacing: 0.04em;
+    }
+
+    .logement-body {
+      padding: 28px 32px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .logement-desc {
+      font-size: 0.94rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+    .logement-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+    .logement-features li {
+      font-size: 0.86rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .logement-features li::before {
+      content: '·';
+      color: var(--ocre-deep);
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+    .logement-link {
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ocre-deep);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap .25s;
+    }
+    .logement-card:hover .logement-link { gap: 14px; }
+
+    /* Card spéciale "studio → studio-limoges.fr" */
+    .logement-card.external {
+      background: var(--stone-warm);
+      border: 1px dashed var(--ocre-deep);
+    }
+    .logement-card.external .logement-header {
+      background: linear-gradient(135deg, #c4622d 0%, #a04d20 100%);
+    }
+    .logement-card.external .logement-num {
+      color: rgba(255, 240, 230, 0.85);
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTION QUARTIERS
+       ═══════════════════════════════════════════════ */
+    .quartiers-section {
+      background: var(--stone);
+    }
+
+    .quartiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .quartier-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 30px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .35s, box-shadow .35s, border-color .35s;
+      position: relative;
+      overflow: hidden;
+    }
+    .quartier-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--ocre);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .35s;
+    }
+    .quartier-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(45, 68, 56, .1);
+      border-color: var(--ocre);
+    }
+    .quartier-card:hover::before { transform: scaleY(1); }
+
+    .quartier-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: var(--ocre-deep);
+      margin-bottom: 12px;
+    }
+    .quartier-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--sage-deep);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .quartier-zone {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .quartier-desc {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .quartier-stats {
+      display: flex;
+      gap: 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .quartier-stats span strong {
+      color: var(--sage);
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Card spéciale "en attente / placeholder" */
+    .quartier-card.placeholder {
+      background: var(--stone-warm);
+      border: 1px dashed var(--ocre-deep);
+      opacity: 0.85;
+    }
+    .quartier-card.placeholder .quartier-name {
+      color: var(--sage-light);
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTION PROMESSE
+       ═══════════════════════════════════════════════ */
+    .promesse-section {
+      background: var(--sage-deep);
+      color: var(--stone-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .promesse-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 380px; height: 380px;
+      border: 1px solid rgba(200, 161, 106, .12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .promesse-section h2 {
+      color: var(--stone-soft);
+    }
+    .promesse-section h2 em {
+      color: var(--ocre-light);
+    }
+    .promesse-section .section-tag {
+      color: var(--ocre-light);
+    }
+    .promesse-section .section-tag::before {
+      background: var(--ocre-light);
+    }
+    .promesse-section .section-sub {
+      color: rgba(245, 240, 230, .75);
+    }
+
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .valeur-item {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(200, 161, 106, .15);
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 20px;
+      align-items: baseline;
+    }
+    .valeur-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 2.4rem;
+      color: var(--ocre);
+      line-height: 1;
+    }
+    .valeur-content h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--stone-soft);
+      margin-bottom: 8px;
+    }
+    .valeur-content p {
+      font-size: 0.94rem;
+      color: rgba(245, 240, 230, 0.7);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTION RÉSEAU BEGIP
+       ═══════════════════════════════════════════════ */
+    .reseau-section {
+      background: var(--stone-soft);
+    }
+
+    .reseau-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .reseau-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 26px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all .3s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .reseau-card:hover {
+      border-color: var(--ocre);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(45, 68, 56, .08);
+    }
+    .reseau-card.current {
+      background: var(--sage);
+      color: var(--stone-soft);
+      border-color: var(--ocre);
+    }
+    .reseau-card.current .reseau-name { color: var(--stone-soft); }
+    .reseau-card.current .reseau-url { color: var(--ocre-light); }
+    .reseau-card.current .reseau-desc { color: rgba(245, 240, 230, 0.7); }
+
+    .reseau-name {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--sage-deep);
+    }
+    .reseau-url {
+      font-size: 0.78rem;
+      color: var(--ocre-deep);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .reseau-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       SECTION CONTACT / CTA
+       ═══════════════════════════════════════════════ */
+    .cta-section {
+      background: var(--stone-warm);
+      text-align: center;
+      padding: 100px 56px;
+    }
+    .cta-section h2 {
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+    .cta-section p {
+      max-width: 620px;
+      margin: 0 auto 40px;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-sage {
+      background: var(--sage);
+      color: var(--stone-soft);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background .25s, transform .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-sage:hover {
+      background: var(--sage-deep);
+      transform: translateY(-2px);
+    }
+    .btn-sage::after { content: '→'; }
+
+    .btn-outline-sage {
+      border: 1px solid var(--sage);
+      color: var(--sage);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all .25s;
+    }
+    .btn-outline-sage:hover {
+      background: var(--sage);
+      color: var(--stone-soft);
+    }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════ */
+    footer {
+      background: var(--sage-deep);
+      color: var(--stone-soft);
+      padding: 72px 56px 32px;
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 52px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid rgba(200, 161, 106, .15);
+    }
+    .footer-brand .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 18px;
+      display: inline-block;
+    }
+    .footer-brand .footer-logo span { color: #ffffff; }
+    .footer-brand .footer-logo em { margin: 0 4px; }
+    .footer-brand .footer-logo em {
+      font-style: italic;
+      color: var(--ocre-light);
+      font-weight: 400;
+    }
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: rgba(245, 240, 230, .6);
+      line-height: 1.7;
+      max-width: 380px;
+      font-weight: 300;
+    }
+    .footer-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ocre-light);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .footer-col a {
+      color: rgba(245, 240, 230, .65);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color .25s;
+    }
+    .footer-col a:hover { color: var(--ocre-light); }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(245, 240, 230, .4);
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════ */
+    @media (max-width: 980px) {
+      nav { padding: 18px 20px; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-link:not(.nav-cta), .nav-dropdown-trigger { display: none; }
+      .nav-right { gap: 16px; }
+      .hero { padding: 110px 24px 70px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 56px; }
+      .hero::after { display: none; }
+      section { padding: 80px 24px; }
+      .types-grid, .quartiers-grid { grid-template-columns: 1fr; }
+      .reseau-grid { grid-template-columns: 1fr 1fr; }
+      .valeurs-grid { grid-template-columns: 1fr; gap: 24px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .type-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav aria-label="Navigation principale">
+  <a href="/" class="nav-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></a>
+  <div class="nav-right">
+    <a href="#types" class="nav-link">Types de logement</a>
+    <a href="#quartiers" class="nav-link">Quartiers</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Sites partenaires <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Studio Limoges <span style="opacity:.5">↗</span></a>
+        <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Résidence Étudiante Limoges <span style="opacity:.5">↗</span></a>
+        <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Begip — Agence <span style="opacity:.5">↗</span></a>
+      </div>
+    </div>
+    <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Begip · Limoges depuis + de 30 ans</div>
+      <h1>Habiter <em>Limoges</em>, simplement.</h1>
+      <p class="hero-desc">Appartements, maisons, biens en gestion directe par Begip à Limoges et dans son agglomération. Notre agence locale vous accompagne pour trouver le logement adapté à votre vie — du jeune actif au couple, de la famille aux nouveaux arrivants.</p>
+      <div class="hero-actions">
+        <a href="#types" class="btn-primary">Voir les logements</a>
+        <a href="#contact" class="btn-ghost">Nous écrire</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-title">Que cherchez-vous ?</div>
+      <div class="type-grid">
+        <a href="#t2" class="type-card">
+          <span class="type-name">T2</span>
+          <span class="type-sub">2 pièces · couples, jeunes actifs</span>
+        </a>
+        <a href="#t3" class="type-card">
+          <span class="type-name">T3</span>
+          <span class="type-sub">3 pièces · petites familles</span>
+        </a>
+        <a href="#t4" class="type-card">
+          <span class="type-name">T4 et +</span>
+          <span class="type-sub">Grands appartements</span>
+        </a>
+        <a href="#maisons" class="type-card">
+          <span class="type-name">Maisons</span>
+          <span class="type-sub">Limoges & alentours</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TYPES DE LOGEMENT ═══════════════════ -->
+<section class="types-section" id="types">
+  <div class="section-inner">
+    <div class="section-tag">Nos logements</div>
+    <h2>Trouvez le bien <em>qui vous ressemble</em></h2>
+    <p class="section-sub">De l'appartement T2 lumineux pour deux à la maison familiale, Begip gère un parc varié à Limoges et dans la Haute-Vienne. Chaque bien est sélectionné, vérifié, et accompagné par notre équipe locale.</p>
+
+    <div class="types-grid">
+      <!-- T2 -->
+      <a href="#" class="logement-card">
+        <div class="logement-header">
+          <div class="logement-num">N° 01</div>
+          <h3 class="logement-name">Appartement T2</h3>
+          <div class="logement-tagline">2 pièces · 35 à 55 m²</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">L'option idéale pour un couple, un jeune actif ou une mobilité professionnelle. Cuisine équipée, espace nuit séparé, dans des immeubles bien situés près des commerces et transports.</p>
+          <ul class="logement-features">
+            <li>Centre-ville et quartiers résidentiels</li>
+            <li>Vide ou meublé selon les biens</li>
+            <li>Cave ou parking selon les immeubles</li>
+          </ul>
+          <span class="logement-link">Voir les T2 disponibles →</span>
+        </div>
+      </a>
+
+      <!-- T3 -->
+      <a href="#" class="logement-card">
+        <div class="logement-header">
+          <div class="logement-num">N° 02</div>
+          <h3 class="logement-name">Appartement T3</h3>
+          <div class="logement-tagline">3 pièces · 55 à 75 m²</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">Le format polyvalent : couple avec enfant, colocation entre amis, espace de télétravail. Deux chambres, un séjour spacieux, dans des immeubles avec ascenseur ou des résidences avec extérieur.</p>
+          <ul class="logement-features">
+            <li>Petites familles ou couples établis</li>
+            <li>Possibilité balcon, terrasse ou jardin</li>
+            <li>Stationnement souvent inclus</li>
+          </ul>
+          <span class="logement-link">Voir les T3 disponibles →</span>
+        </div>
+      </a>
+
+      <!-- T4 et + -->
+      <a href="#" class="logement-card">
+        <div class="logement-header">
+          <div class="logement-num">N° 03</div>
+          <h3 class="logement-name">T4 et plus</h3>
+          <div class="logement-tagline">4 pièces et plus · 75 m² et +</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">Grands appartements pour les familles établies. Trois chambres ou plus, séjour familial, double salle d'eau dans certains biens. Souvent dans des immeubles de standing du centre-ville ou en quartier résidentiel.</p>
+          <ul class="logement-features">
+            <li>Familles avec enfants</li>
+            <li>Quartiers calmes et bien desservis</li>
+            <li>Caves et stationnement inclus</li>
+          </ul>
+          <span class="logement-link">Voir les T4 et plus →</span>
+        </div>
+      </a>
+
+      <!-- Maisons Limoges -->
+      <a href="#" class="logement-card">
+        <div class="logement-header">
+          <div class="logement-num">N° 04</div>
+          <h3 class="logement-name">Maisons à Limoges</h3>
+          <div class="logement-tagline">Avec jardin, garage, dépendances</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">Pour ceux qui cherchent un vrai chez-soi avec jardin et garage à Limoges. Maisons individuelles ou mitoyennes, dans des quartiers résidentiels calmes.</p>
+          <ul class="logement-features">
+            <li>Familles avec enfants</li>
+            <li>Jardin et stationnement privatif</li>
+            <li>Quartiers résidentiels de Limoges</li>
+          </ul>
+          <span class="logement-link">Voir les maisons →</span>
+        </div>
+      </a>
+
+      <!-- Maisons hors Limoges -->
+      <a href="#" class="logement-card">
+        <div class="logement-header">
+          <div class="logement-num">N° 05</div>
+          <h3 class="logement-name">Maisons en Haute-Vienne</h3>
+          <div class="logement-tagline">Hors Limoges · communes alentour</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">Begip gère également quelques maisons disséminées dans la Haute-Vienne, en dehors de Limoges. Pour ceux qui recherchent la tranquillité de la campagne ou des bourgs ruraux à proximité de la ville.</p>
+          <ul class="logement-features">
+            <li>Communes hors agglomération</li>
+            <li>Cadre rural ou semi-rural</li>
+            <li>Idéal télétravail / résidence principale</li>
+          </ul>
+          <span class="logement-link">Découvrir →</span>
+        </div>
+      </a>
+
+      <!-- Card spéciale : renvoi vers studio-limoges.fr -->
+      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="logement-card external">
+        <div class="logement-header">
+          <div class="logement-num">Site spécialisé ↗</div>
+          <h3 class="logement-name">Studios & T1</h3>
+          <div class="logement-tagline">Voir studio-limoges.fr</div>
+        </div>
+        <div class="logement-body">
+          <p class="logement-desc">Vous cherchez un studio ou un T1 à Limoges ? Begip dispose d'un site dédié pour cette typologie : <strong>studio-limoges.fr</strong>. Vous y trouverez l'ensemble de l'offre studio et T1 ainsi que les conditions adaptées.</p>
+          <ul class="logement-features">
+            <li>Studios meublés ou vides</li>
+            <li>T1 dans tout Limoges</li>
+            <li>Site spécialisé Begip</li>
+          </ul>
+          <span class="logement-link">Aller sur studio-limoges.fr ↗</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ QUARTIERS & SECTEURS ═══════════════════ -->
+<section class="quartiers-section" id="quartiers">
+  <div class="section-inner">
+    <div class="section-tag">Quartiers & secteurs</div>
+    <h2>Limoges et son <em>agglomération</em></h2>
+    <p class="section-sub">Begip gère des biens dans plusieurs quartiers de Limoges intra-muros, dans le secteur nord de l'agglomération, et ponctuellement dans la Haute-Vienne. Découvrez les zones où nous sommes implantés.</p>
+
+    <div class="quartiers-grid">
+
+      <!-- Centre-ville Limoges (placeholder à compléter demain) -->
+      <a href="#" class="quartier-card">
+        <div class="quartier-num">01</div>
+        <h3 class="quartier-name">Centre-ville de Limoges</h3>
+        <div class="quartier-zone">Hyper-centre · Bénédictins · Halles</div>
+        <p class="quartier-desc">Le cœur historique de Limoges : commerces à pied, gare des Bénédictins, vie culturelle. Begip gère plusieurs immeubles d'habitation dans ce secteur.</p>
+        <div class="quartier-stats">
+          <span><strong>—</strong> immeubles</span>
+          <span><strong>—</strong> logements</span>
+        </div>
+      </a>
+
+      <!-- Quartier 2 — placeholder -->
+      <a href="#" class="quartier-card">
+        <div class="quartier-num">02</div>
+        <h3 class="quartier-name">Quartier à préciser</h3>
+        <div class="quartier-zone">Rue / secteur à compléter</div>
+        <p class="quartier-desc">Information en cours de mise à jour. Détails sur les biens en gestion bientôt disponibles.</p>
+        <div class="quartier-stats">
+          <span><strong>—</strong> immeubles</span>
+          <span><strong>—</strong> logements</span>
+        </div>
+      </a>
+
+      <!-- Quartier 3 — placeholder -->
+      <a href="#" class="quartier-card">
+        <div class="quartier-num">03</div>
+        <h3 class="quartier-name">Quartier à préciser</h3>
+        <div class="quartier-zone">Rue / secteur à compléter</div>
+        <p class="quartier-desc">Information en cours de mise à jour. Détails sur les biens en gestion bientôt disponibles.</p>
+        <div class="quartier-stats">
+          <span><strong>—</strong> immeubles</span>
+          <span><strong>—</strong> logements</span>
+        </div>
+      </a>
+
+      <!-- Secteur nord — placeholder à remplir demain -->
+      <a href="#" class="quartier-card placeholder">
+        <div class="quartier-num">04</div>
+        <h3 class="quartier-name">Secteur nord de Limoges</h3>
+        <div class="quartier-zone">Commune en attente — info à venir</div>
+        <p class="quartier-desc">Begip gère un parc d'environ 50 logements dans une commune au nord de Limoges. Les détails (localité, adresse, typologies) seront bientôt mis à jour.</p>
+        <div class="quartier-stats">
+          <span><strong>~50</strong> logements</span>
+          <span><strong>1</strong> commune</span>
+        </div>
+      </a>
+
+      <!-- Maisons Haute-Vienne -->
+      <a href="#" class="quartier-card">
+        <div class="quartier-num">05</div>
+        <h3 class="quartier-name">Maisons en Haute-Vienne</h3>
+        <div class="quartier-zone">Hors Limoges · communes diverses</div>
+        <p class="quartier-desc">Quelques maisons disséminées dans le département. Pour ceux qui recherchent un cadre plus rural ou semi-rural à proximité de Limoges.</p>
+        <div class="quartier-stats">
+          <span><strong>—</strong> maisons</span>
+          <span><strong>87</strong> Haute-Vienne</span>
+        </div>
+      </a>
+
+      <!-- Bientôt d'autres -->
+      <a href="#contact" class="quartier-card placeholder">
+        <div class="quartier-num">+</div>
+        <h3 class="quartier-name">D'autres biens régulièrement</h3>
+        <div class="quartier-zone">Nouveaux mandats à Limoges</div>
+        <p class="quartier-desc">Begip rentre régulièrement de nouveaux biens en gestion à Limoges. Contactez-nous pour les disponibilités du moment, avant qu'ils ne soient publiés.</p>
+        <div class="quartier-stats">
+          <span><strong>Nous</strong> contacter</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROMESSE BEGIP ═══════════════════ -->
+<section class="promesse-section">
+  <div class="section-inner">
+    <div class="section-tag">Notre promesse</div>
+    <h2>Une agence locale,<br /><em>présente et engagée</em></h2>
+    <p class="section-sub">Trente ans de présence à Limoges, ça crée des habitudes : être joignable, agir vite, connaître chaque immeuble géré comme le sien — et faire évoluer nos méthodes au rythme des outils modernes.</p>
+
+    <div class="valeurs-grid">
+      <div class="valeur-item">
+        <div class="valeur-num">I</div>
+        <div class="valeur-content">
+          <h3>Une équipe à Limoges</h3>
+          <p>Pas de plateforme délocalisée, pas de centre d'appel. Une vraie agence avenue Georges Dumas, joignable et présente toute la semaine.</p>
+        </div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">II</div>
+        <div class="valeur-content">
+          <h3>Home Service &amp; artisans partenaires</h3>
+          <p>Begip s'appuie sur la société <strong>Home Service</strong> (multiservices) et un réseau d'artisans locaux en partenariat de longue date pour toutes les interventions, urgentes ou non. L'objectif : que vous profitiez pleinement de votre logement, dans les meilleures conditions.</p>
+        </div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">III</div>
+        <div class="valeur-content">
+          <h3>États des lieux numériques sur tablette</h3>
+          <p>Begip réalise vos états des lieux d'entrée et de sortie directement sur tablette, avec photos horodatées et signature électronique. Un processus moderne, fluide, et un compte-rendu transmis immédiatement.</p>
+        </div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">IV</div>
+        <div class="valeur-content">
+          <h3>Accompagnement administratif</h3>
+          <p>Aides au logement (APL/ALS), Visale, garant moral, Mobili-Jeune pour les alternants : nous vous orientons sur les dispositifs adaptés à votre situation.</p>
+        </div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">V</div>
+        <div class="valeur-content">
+          <h3>Transparence totale</h3>
+          <p>Dossier clair, conditions précisées dès la prise de contact, pas de frais cachés. Vous savez ce que vous signez, et ce qui vous attend.</p>
+        </div>
+      </div>
+      <div class="valeur-item">
+        <div class="valeur-num">VI</div>
+        <div class="valeur-content">
+          <h3>30 ans d'ancrage local</h3>
+          <p>Begip connaît Limoges, ses immeubles, ses quartiers, ses interlocuteurs. Cette expérience profite directement à nos locataires : conseil pertinent, réactivité, fiabilité.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ RÉSEAU BEGIP ═══════════════════ -->
+<section class="reseau-section">
+  <div class="section-inner">
+    <div class="section-tag">Le réseau Begip</div>
+    <h2>Tous nos sites <em>spécialisés</em></h2>
+    <p class="section-sub">Pour vous orienter rapidement vers le bon interlocuteur, Begip a structuré son offre en plusieurs sites thématiques. Chaque site est dédié à un public ou à une typologie particulière.</p>
+
+    <div class="reseau-grid">
+
+      <a href="#" class="reseau-card current">
+        <div class="reseau-name">Mon Logement Limoges</div>
+        <div class="reseau-url">mon-logement-limoges.fr</div>
+        <div class="reseau-desc">Ce site — appartements et maisons à louer à Limoges et en Haute-Vienne</div>
+      </a>
+
+      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+        <div class="reseau-name">Studio Limoges</div>
+        <div class="reseau-url">studio-limoges.fr</div>
+        <div class="reseau-desc">Studios et T1 vides ou meublés à Limoges</div>
+      </a>
+
+      <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+        <div class="reseau-name">Résidence Étudiante</div>
+        <div class="reseau-url">residenceetudiantelimoges.fr</div>
+        <div class="reseau-desc">3 résidences étudiantes — 450+ logements à Limoges</div>
+      </a>
+
+      <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+        <div class="reseau-name">Begip — Agence</div>
+        <div class="reseau-url">begip.fr</div>
+        <div class="reseau-desc">Site officiel de l'agence — propriétaires et services</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA CONTACT ═══════════════════ -->
+<section class="cta-section" id="contact">
+  <div class="section-inner">
+    <div class="section-tag" style="justify-content: center;">Contact</div>
+    <h2>Trouvez votre <em>prochain logement</em> à Limoges</h2>
+    <p>Begip vous recontacte rapidement avec les biens disponibles correspondant à vos critères. Type de logement, quartier, budget, date d'emménagement : dites-nous tout, nous nous occupons du reste.</p>
+    <div class="cta-actions">
+      <a href="tel:0555339750" class="btn-sage">Appeler 05 55 33 97 50</a>
+      <a href="mailto:agence@begip.fr" class="btn-outline-sage">agence@begip.fr</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></div>
+        <p>Le site Begip dédié à la location d'appartements et de maisons à Limoges et en Haute-Vienne. Une agence locale, 30 ans d'expérience, un parc varié.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Logements</h4>
+        <ul>
+          <li><a href="#t2">Appartements T2</a></li>
+          <li><a href="#t3">Appartements T3</a></li>
+          <li><a href="#t4">T4 et plus</a></li>
+          <li><a href="#maisons">Maisons</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Réseau Begip</h4>
+        <ul>
+          <li><a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer">Studio Limoges ↗</a></li>
+          <li><a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer">Résidence Étudiante ↗</a></li>
+          <li><a href="https://begip.fr" target="_blank" rel="noopener noreferrer">Begip ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#contact">Nous contacter</a></li>
+          <li><a href="#">FAQ Locataire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 mon-logement-limoges.fr · Un site du réseau Begip Limoges · 30 ans d'expérience locale</div>
+  </div>
+</footer>
+
+<script>
+  // Dropdown menu toggle
+  const dropdown = document.querySelector('.nav-dropdown');
+  if (dropdown) {
+    const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+      const expanded = dropdown.classList.contains('open');
+      trigger.setAttribute('aria-expanded', expanded);
+    });
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
