@@ -752,21 +752,162 @@
        SECTION CONTACT / CTA
        ═══════════════════════════════════════════════ */
     .cta-section {
-      background: var(--stone-warm);
-      text-align: center;
+      background: var(--sage-deep);
       padding: 100px 56px;
     }
-    .cta-section h2 {
-      max-width: 760px;
-      margin: 0 auto 24px;
+    .cta-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
     }
+    .cta-left .section-tag { color: var(--ocre-light); }
+    .cta-left .section-tag::before { background: var(--ocre-light); }
+    .cta-section h2 { color: var(--stone-soft); margin-bottom: 20px; }
+    .cta-section h2 em { color: var(--ocre-light); }
     .cta-section p {
-      max-width: 620px;
-      margin: 0 auto 40px;
-      color: var(--ink-soft);
-      font-size: 1.05rem;
+      color: rgba(245,240,230,.72);
+      font-size: 1rem;
       line-height: 1.8;
+      margin-bottom: 40px;
+      font-weight: 300;
     }
+    .cta-direct {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cta-direct-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: rgba(245,240,230,.75);
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .cta-direct-item:hover { color: var(--ocre-light); }
+    .cta-direct-icon {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(200,161,106,.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      color: var(--ocre-light);
+    }
+
+    /* ─── Formulaire ─── */
+    .contact-form-wrap {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(200,161,106,.15);
+      border-radius: 6px;
+      padding: 48px 44px;
+    }
+    .form-title {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: var(--ocre-light);
+      margin-bottom: 32px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .form-row .form-group { margin-bottom: 0; }
+    .form-group label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245,240,230,.55);
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(200,161,106,.2);
+      border-radius: 4px;
+      padding: 12px 16px;
+      color: var(--stone-soft);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      transition: border-color .2s, background .2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(245,240,230,.3); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(200,161,106,.6);
+      background: rgba(255,255,255,.09);
+    }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--sage-deep); color: var(--stone-soft); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%;
+      background: var(--ocre);
+      color: var(--sage-deep);
+      border: none;
+      padding: 16px 24px;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .25s, transform .2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--ocre-light); transform: translateY(-2px); }
+    .form-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    .form-note {
+      font-size: 0.75rem;
+      color: rgba(245,240,230,.35);
+      margin-top: 14px;
+      text-align: center;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+      color: var(--stone-soft);
+    }
+    .form-success .success-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .form-success h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      color: var(--ocre-light);
+      margin-bottom: 10px;
+    }
+    .form-success p { color: rgba(245,240,230,.72); font-size: 0.95rem; }
+
+    @media (max-width: 980px) {
+      .cta-inner { grid-template-columns: 1fr; gap: 48px; }
+      .cta-section { padding: 80px 24px; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
     .cta-actions {
       display: flex;
       justify-content: center;
@@ -1379,14 +1520,109 @@
 
 <!-- ═══════════════════ CTA CONTACT ═══════════════════ -->
 <section class="cta-section" id="contact">
-  <div class="section-inner">
-    <div class="section-tag" style="justify-content: center;">Contact</div>
-    <h2>Trouvez votre <em>prochain logement</em> à Limoges</h2>
-    <p>Begip vous recontacte rapidement avec les biens disponibles correspondant à vos critères. Type de logement, quartier, budget, date d'emménagement : dites-nous tout, nous nous occupons du reste.</p>
-    <div class="cta-actions">
-      <a href="tel:0555339750" class="btn-sage">Appeler 05 55 33 97 50</a>
-      <a href="mailto:agence@begip.fr" class="btn-outline-sage">agence@begip.fr</a>
+  <div class="cta-inner">
+
+    <!-- Colonne gauche : texte + contact direct -->
+    <div class="cta-left">
+      <div class="section-tag">Contact</div>
+      <h2>Trouvez votre <em>prochain logement</em> à Limoges</h2>
+      <p>Begip vous recontacte rapidement avec les biens disponibles correspondant à vos critères. Type de logement, quartier, budget, date d'emménagement : dites-nous tout, nous nous occupons du reste.</p>
+      <div class="cta-direct">
+        <a href="tel:0555339750" class="cta-direct-item">
+          <span class="cta-direct-icon">📞</span>
+          <span>05 55 33 97 50</span>
+        </a>
+        <a href="mailto:agence@begip.fr" class="cta-direct-item">
+          <span class="cta-direct-icon">✉</span>
+          <span>agence@begip.fr</span>
+        </a>
+        <div class="cta-direct-item" style="cursor:default;">
+          <span class="cta-direct-icon">📍</span>
+          <span>Avenue Georges Dumas, Limoges</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Colonne droite : formulaire -->
+    <div class="contact-form-wrap">
+      <div class="form-title">Décrivez votre recherche</div>
+
+      <form action="https://formspree.io/f/xlgagzpy" method="POST" id="contactForm">
+        <input type="hidden" name="_subject" value="Nouveau contact Mon Logement Limoges" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required placeholder="Votre nom" />
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.fr" />
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="type_logement">Type de logement</label>
+            <select id="type_logement" name="type_logement">
+              <option value="">Sélectionnez...</option>
+              <option value="T2">Appartement T2</option>
+              <option value="T3">Appartement T3</option>
+              <option value="T4+">T4 et plus</option>
+              <option value="Maison Limoges">Maison à Limoges</option>
+              <option value="Logement Haute-Vienne">Logement Haute-Vienne</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget mensuel</label>
+            <select id="budget" name="budget">
+              <option value="">Sélectionnez...</option>
+              <option value="< 500€">Moins de 500 €</option>
+              <option value="500-700€">500 – 700 €</option>
+              <option value="700-900€">700 – 900 €</option>
+              <option value="> 900€">Plus de 900 €</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dispo">Date d'emménagement souhaitée</label>
+          <select id="dispo" name="dispo">
+            <option value="">Sélectionnez...</option>
+            <option value="Immédiatement">Immédiatement</option>
+            <option value="Dans 1 mois">Dans 1 mois</option>
+            <option value="Dans 2-3 mois">Dans 2 – 3 mois</option>
+            <option value="Dans 6 mois ou +">Dans 6 mois ou plus</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (quartier souhaité, situation, questions…)</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre situation, vos critères, vos questions…"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="submitBtn">Envoyer ma demande</button>
+        <p class="form-note">Vos données sont traitées par Begip uniquement pour répondre à votre demande. Aucun démarchage.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>Message envoyé !</h3>
+        <p>Begip reviendra vers vous rapidement — généralement sous 24 h.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1447,6 +1683,37 @@
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('open');
         trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Formulaire contact Formspree
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formSuccess = document.getElementById('formSuccess');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours…';
+      try {
+        const resp = await fetch('https://formspree.io/f/xlgagzpy', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (resp.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Envoyer ma demande';
+          alert('Une erreur est survenue. Merci de nous contacter par téléphone ou email.');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer ma demande';
+        alert('Erreur réseau. Merci de nous contacter directement.');
       }
     });
   }
