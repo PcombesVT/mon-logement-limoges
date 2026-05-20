@@ -882,6 +882,75 @@
       color: rgba(245, 240, 230, .4);
     }
 
+    /* ─── Hamburger ─── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+      flex-direction: column;
+      gap: 5px;
+      margin-left: 8px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--stone-soft);
+      border-radius: 2px;
+      transition: all .25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── Mobile menu overlay ─── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--sage-deep);
+      z-index: 98;
+      padding: 90px 28px 40px;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-link {
+      color: rgba(245, 240, 230, .88);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(200, 161, 106, .1);
+      transition: color .2s;
+    }
+    .mobile-menu-link:hover { color: var(--ocre-light); }
+    .mobile-menu-divider {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ocre-light);
+      font-weight: 600;
+      padding: 24px 0 4px;
+    }
+    .mobile-menu-cta {
+      display: inline-block;
+      margin-top: 28px;
+      background: var(--ocre);
+      color: var(--sage-deep);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+    }
+
     /* ═══════════════════════════════════════════════
        RESPONSIVE
        ═══════════════════════════════════════════════ */
@@ -889,16 +958,23 @@
       nav { padding: 18px 20px; }
       .nav-logo { font-size: 1.05rem; }
       .nav-link:not(.nav-cta), .nav-dropdown-trigger { display: none; }
-      .nav-right { gap: 16px; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-right { gap: 12px; }
       .hero { padding: 110px 24px 70px; }
       .hero-inner { grid-template-columns: 1fr; gap: 56px; }
       .hero::after { display: none; }
       section { padding: 80px 24px; }
       .types-grid, .quartiers-grid { grid-template-columns: 1fr; }
-      .reseau-grid { grid-template-columns: 1fr 1fr; }
+      .reseau-grid { grid-template-columns: 1fr; }
       .valeurs-grid { grid-template-columns: 1fr; gap: 24px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
       .type-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .hero-card { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -924,8 +1000,27 @@
       </div>
     </div>
     <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
+    <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- ═══════════════════ MENU MOBILE ═══════════════════ -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navigation">
+  <a href="#types" class="mobile-menu-link">Types de logement</a>
+  <a href="quartiers-loger-limoges.html" class="mobile-menu-link">Quartiers de Limoges</a>
+  <a href="aides-logement-limoges.html" class="mobile-menu-link">Aides au logement</a>
+  <div class="mobile-menu-divider">Sites partenaires</div>
+  <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Studio Limoges ↗</a>
+  <a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Vanteaux Limoges ↗</a>
+  <a href="https://www.emagine-residence.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Emagine Résidence ↗</a>
+  <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Résidence Étudiante ↗</a>
+  <a href="https://www.university-dutreix.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">University Dutreix ↗</a>
+  <a href="https://www.university-meissonier.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">University Meissonier ↗</a>
+  <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Begip — Agence ↗</a>
+  <a href="#contact" class="mobile-menu-cta">Nous contacter</a>
+</div>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero">
@@ -1339,21 +1434,41 @@
 </footer>
 
 <script>
-  // Dropdown menu toggle
+  // Dropdown desktop toggle
   const dropdown = document.querySelector('.nav-dropdown');
   if (dropdown) {
     const trigger = dropdown.querySelector('.nav-dropdown-trigger');
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
       dropdown.classList.toggle('open');
-      const expanded = dropdown.classList.contains('open');
-      trigger.setAttribute('aria-expanded', expanded);
+      trigger.setAttribute('aria-expanded', dropdown.classList.contains('open'));
     });
     document.addEventListener('click', (e) => {
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('open');
         trigger.setAttribute('aria-expanded', 'false');
       }
+    });
+  }
+
+  // Hamburger menu mobile
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    // Fermer le menu en cliquant sur un lien
+    mobileMenu.querySelectorAll('.mobile-menu-link, .mobile-menu-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
     });
   }
 </script>
