@@ -41,6 +41,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Vivre à Limoges -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/vivre-a-limoges.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Haute-Vienne campagne & nature -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/haute-vienne-campagne-nature.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Mentions légales -->
   <url>
     <loc>https://www.mon-logement-limoges.fr/mentions-legales.html</loc>
