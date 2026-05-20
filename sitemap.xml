@@ -9,6 +9,38 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Location T2 Limoges -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/location-t2-limoges.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Location T3 Limoges -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/location-t3-limoges.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Quartiers de Limoges -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/quartiers-loger-limoges.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Aides au logement Limoges -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/aides-logement-limoges.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Mentions légales -->
   <url>
     <loc>https://www.mon-logement-limoges.fr/mentions-legales.html</loc>
