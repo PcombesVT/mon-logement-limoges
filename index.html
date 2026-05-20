@@ -1128,6 +1128,13 @@
     <a href="#types" class="nav-link">Types de logement</a>
     <a href="quartiers-loger-limoges.html" class="nav-link">Quartiers</a>
     <a href="aides-logement-limoges.html" class="nav-link">Aides</a>
+    <div class="nav-dropdown" id="dd-decouvrir">
+      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Découvrir <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="vivre-a-limoges.html" role="menuitem">Vivre à Limoges</a>
+        <a href="haute-vienne-campagne-nature.html" role="menuitem">Haute-Vienne — Nature & vie</a>
+      </div>
+    </div>
     <div class="nav-dropdown">
       <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Sites partenaires <span class="nav-caret">▾</span></button>
       <div class="nav-dropdown-menu" role="menu">
@@ -1152,6 +1159,9 @@
   <a href="#types" class="mobile-menu-link">Types de logement</a>
   <a href="quartiers-loger-limoges.html" class="mobile-menu-link">Quartiers de Limoges</a>
   <a href="aides-logement-limoges.html" class="mobile-menu-link">Aides au logement</a>
+  <div class="mobile-menu-divider">Découvrir</div>
+  <a href="vivre-a-limoges.html" class="mobile-menu-link">Vivre à Limoges</a>
+  <a href="haute-vienne-campagne-nature.html" class="mobile-menu-link">Haute-Vienne — Nature & vie</a>
   <div class="mobile-menu-divider">Sites partenaires</div>
   <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Studio Limoges ↗</a>
   <a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Vanteaux Limoges ↗</a>
@@ -1670,22 +1680,25 @@
 </footer>
 
 <script>
-  // Dropdown desktop toggle
-  const dropdown = document.querySelector('.nav-dropdown');
-  if (dropdown) {
+  // Dropdowns desktop toggle (tous les .nav-dropdown)
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     const trigger = dropdown.querySelector('.nav-dropdown-trigger');
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
-      dropdown.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+      const isOpen = dropdown.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+      // Ferme les autres
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) { d.classList.remove('open'); d.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded','false'); }
+      });
     });
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-        trigger.setAttribute('aria-expanded', 'false');
-      }
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown').forEach(d => {
+      d.classList.remove('open');
+      d.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded','false');
     });
-  }
+  });
 
   // Formulaire contact Formspree
   const contactForm = document.getElementById('contactForm');
