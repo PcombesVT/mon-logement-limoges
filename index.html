@@ -7,6 +7,8 @@
   <meta name="description" content="Trouvez votre logement à Limoges avec Begip : appartements T2, T3, T4 et maisons à louer dans le centre-ville, les quartiers résidentiels et l'agglomération de Limoges. 30 ans d'expérience locale." />
   <meta name="keywords" content="logement Limoges, location appartement Limoges, T2 Limoges, T3 Limoges, T4 Limoges, maison location Limoges, Begip Limoges, agence immobilière Limoges, location Haute-Vienne" />
   <meta name="google-site-verification" content="iY7NCt7fP_unSMsvPsy6yHzLYklvY7y290YIE4OZ_Eo" />
+  <link rel="canonical" href="https://www.mon-logement-limoges.fr/" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1118,7 +1120,47 @@
       .footer-top { grid-template-columns: 1fr; gap: 28px; }
       .hero-card { padding: 28px 20px; }
     }
+
+    /* ── MARCHÉ LOCATIF ── */
+    .marche-section { background: var(--stone-warm); }
+    .marche-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 8px; }
+    .marche-card { background: var(--stone-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 28px; transition: transform .25s, box-shadow .25s; }
+    .marche-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(61,90,74,.10); }
+    .marche-icon { font-size: 1.9rem; display: block; margin-bottom: 14px; }
+    .marche-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.12rem; color: var(--sage-deep); margin-bottom: 10px; }
+    .marche-desc { font-size: .92rem; color: var(--ink-soft); line-height: 1.7; }
+    .marche-desc strong { color: var(--ocre-deep); font-weight: 600; }
+    @media (max-width: 860px) { .marche-grid { grid-template-columns: 1fr; } }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--stone); }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; margin-top: 8px; }
+    .faq-item { background: var(--stone-soft); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1rem; color: var(--sage-deep); transition: color .2s; }
+    .faq-q:hover { color: var(--ocre-deep); }
+    .faq-arrow { flex-shrink: 0; color: var(--ocre); transition: transform .3s; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-item.open .faq-a { max-height: 360px; }
+    .faq-a-inner { padding: 0 24px 20px; font-size: .93rem; color: var(--ink-soft); line-height: 1.75; border-top: 1px solid var(--line); padding-top: 16px; }
+    .faq-a-inner strong { color: var(--sage-deep); }
   </style>
+
+  <!-- Schema.org — FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Faut-il un garant pour louer un logement à Limoges ?", "acceptedAnswer": { "@type": "Answer", "text": "Un garant est généralement demandé. Si vous n'en avez pas, la garantie Visale (gratuite, proposée par Action Logement) peut le remplacer, et d'autres solutions de caution sont étudiées au cas par cas. Begip vous oriente vers le dispositif adapté à votre situation." } },
+      { "@type": "Question", "name": "Quels sont les frais d'agence chez Begip ?", "acceptedAnswer": { "@type": "Answer", "text": "Les honoraires de location sont encadrés par la loi (plafonnés selon la surface du logement) et vous sont indiqués clairement dès la prise de contact. Pas de frais cachés." } },
+      { "@type": "Question", "name": "Les logements sont-ils meublés ou vides ?", "acceptedAnswer": { "@type": "Answer", "text": "Les deux, selon les biens. Begip gère des appartements et des maisons vides comme meublés à Limoges et en Haute-Vienne. Précisez votre préférence, nous vous proposons ce qui correspond." } },
+      { "@type": "Question", "name": "Acceptez-vous les animaux de compagnie ?", "acceptedAnswer": { "@type": "Answer", "text": "La loi ne permet pas d'interdire un animal de compagnie dans une location (hors chiens de 1re catégorie). Signalez-le lors de votre demande pour qu'on en tienne compte dans les biens proposés." } },
+      { "@type": "Question", "name": "Comment se passe l'état des lieux ?", "acceptedAnswer": { "@type": "Answer", "text": "Begip réalise les états des lieux d'entrée et de sortie sur tablette, avec photos horodatées et signature électronique. Le compte-rendu vous est transmis immédiatement." } },
+      { "@type": "Question", "name": "Quels documents pour constituer mon dossier ?", "acceptedAnswer": { "@type": "Answer", "text": "Pièce d'identité, justificatif de domicile, 3 derniers bulletins de salaire (ou justificatif de ressources), dernier avis d'imposition et RIB. Les mêmes pièces sont demandées pour le garant. Notre équipe vous accompagne dans le montage du dossier." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1339,15 +1381,14 @@
 
     <div class="quartiers-grid">
 
-      <!-- Centre-ville Limoges (placeholder à compléter demain) -->
-      <a href="#" class="quartier-card">
+      <!-- Centre-ville Limoges -->
+      <a href="quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">01</div>
         <h3 class="quartier-name">Centre-ville de Limoges</h3>
         <div class="quartier-zone">Hyper-centre · Bénédictins · Halles</div>
         <p class="quartier-desc">Le cœur historique de Limoges : commerces à pied, gare des Bénédictins, vie culturelle. Begip gère plusieurs immeubles d'habitation dans ce secteur.</p>
         <div class="quartier-stats">
-          <span><strong>—</strong> immeubles</span>
-          <span><strong>—</strong> logements</span>
+          <span><strong>Disponibilités</strong> régulières</span>
         </div>
       </a>
 
@@ -1358,8 +1399,7 @@
         <div class="quartier-zone">Proche FLSH · IUT · Bords de Vienne</div>
         <p class="quartier-desc">Quartier résidentiel calme, apprécié des étudiants et des actifs. Proche des facultés de lettres et de droit, des bords de la Vienne et des commerces de proximité.</p>
         <div class="quartier-stats">
-          <span><strong>—</strong> immeubles</span>
-          <span><strong>—</strong> logements</span>
+          <span><strong>Disponibilités</strong> régulières</span>
         </div>
       </a>
 
@@ -1370,13 +1410,12 @@
         <div class="quartier-zone">Centre · Gare TGV · Halles</div>
         <p class="quartier-desc">À deux pas de la gare des Bénédictins et des Halles centrales. Idéal pour les actifs en mobilité ou en télétravail. Commerces, transports et services à pied.</p>
         <div class="quartier-stats">
-          <span><strong>—</strong> immeubles</span>
-          <span><strong>—</strong> logements</span>
+          <span><strong>Disponibilités</strong> régulières</span>
         </div>
       </a>
 
       <!-- Secteur nord — Nantiat / Compreignac / Chamboret -->
-      <a href="#" class="quartier-card">
+      <a href="quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">04</div>
         <h3 class="quartier-name">Secteur nord — Nantiat</h3>
         <div class="quartier-zone">Nantiat · Compreignac · Chamboret</div>
@@ -1388,7 +1427,7 @@
       </a>
 
       <!-- Haute-Vienne — Bellac / Chapelet -->
-      <a href="#" class="quartier-card">
+      <a href="quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">05</div>
         <h3 class="quartier-name">Secteur Bellac / Chapelet</h3>
         <div class="quartier-zone">Bellac · Chapelet · Haute-Vienne</div>
@@ -1410,6 +1449,32 @@
         </div>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ MARCHÉ LOCATIF ═══════════════════ -->
+<section class="marche-section">
+  <div class="section-inner">
+    <div class="section-tag">Le marché en 2026</div>
+    <h2>Se loger à Limoges <em>aujourd'hui</em></h2>
+    <p class="section-sub">Un aperçu du marché locatif limougeaud pour situer votre recherche — et comprendre pourquoi une agence locale fait la différence.</p>
+    <div class="marche-grid">
+      <div class="marche-card">
+        <span class="marche-icon">🔑</span>
+        <div class="marche-title">Des loyers accessibles</div>
+        <p class="marche-desc">Limoges figure parmi les villes françaises où se loger coûte le moins cher. Un <strong>T2 s'y loue nettement en dessous</strong> des tarifs des grandes métropoles, à confort équivalent.</p>
+      </div>
+      <div class="marche-card">
+        <span class="marche-icon">📈</span>
+        <div class="marche-title">Une demande qui monte à la rentrée</div>
+        <p class="marche-desc">Étudiants, personnels du CHU, jeunes actifs et nouveaux arrivants : la tension locative <strong>grimpe de juin à septembre</strong>. Chercher tôt, c'est avoir le choix.</p>
+      </div>
+      <div class="marche-card">
+        <span class="marche-icon">🗺️</span>
+        <div class="marche-title">Du centre-ville à la campagne</div>
+        <p class="marche-desc">Du T2 en hyper-centre à la maison avec jardin en Haute-Vienne, l'offre est <strong>variée</strong> — à condition de connaître le terrain. C'est le métier de Begip depuis 30 ans.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1477,7 +1542,7 @@
 
     <div class="reseau-grid">
 
-      <a href="#" class="reseau-card current">
+      <a href="/" class="reseau-card current">
         <div class="reseau-name">Mon Logement Limoges</div>
         <div class="reseau-url">mon-logement-limoges.fr</div>
         <div class="reseau-desc">Ce site — appartements et maisons à louer à Limoges et en Haute-Vienne</div>
@@ -1529,6 +1594,48 @@
   </div>
 </section>
 
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="section-inner">
+    <div class="section-tag">Questions fréquentes</div>
+    <h2>Louer avec Begip, <em>en clair</em></h2>
+    <p class="section-sub">Garant, frais, dossier, animaux, état des lieux : l'essentiel pour aborder sereinement votre location à Limoges.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Faut-il un garant pour louer un logement à Limoges ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Un garant est généralement demandé. Si vous n'en avez pas, la <strong>garantie Visale</strong> (gratuite, proposée par Action Logement) peut le remplacer, et d'autres solutions de caution sont étudiées au cas par cas. Begip vous oriente vers le dispositif adapté à votre situation.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quels sont les frais d'agence chez Begip ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Les honoraires de location sont <strong>encadrés par la loi</strong> (plafonnés selon la surface du logement) et vous sont indiqués clairement dès la prise de contact. Pas de frais cachés : vous savez ce que vous signez.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Les logements sont-ils meublés ou vides ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Les deux, selon les biens. Begip gère des appartements et des maisons <strong>vides comme meublés</strong> à Limoges et en Haute-Vienne. Précisez votre préférence, nous vous proposons ce qui correspond à votre recherche.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Acceptez-vous les animaux de compagnie ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">La loi ne permet pas d'interdire un animal de compagnie dans une location (hors chiens de 1ʳᵉ catégorie). Signalez-le simplement lors de votre demande, pour qu'on en tienne compte dans les biens proposés.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Comment se passe l'état des lieux ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Begip réalise vos états des lieux d'entrée et de sortie <strong>sur tablette</strong>, avec photos horodatées et signature électronique. Le compte-rendu vous est transmis immédiatement — un process moderne et transparent.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quels documents pour constituer mon dossier ?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Pièce d'identité, justificatif de domicile, 3 derniers bulletins de salaire (ou justificatif de ressources), dernier avis d'imposition et RIB. Les mêmes pièces sont demandées pour le garant. Notre équipe vous accompagne dans le montage du dossier.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════ CTA CONTACT ═══════════════════ -->
 <section class="cta-section" id="contact">
   <div class="cta-inner">
@@ -1560,6 +1667,7 @@
 
       <form action="https://formspree.io/f/xlgagzpy" method="POST" id="contactForm">
         <input type="hidden" name="_subject" value="Nouveau contact Mon Logement Limoges" />
+        <input type="hidden" name="source_site" value="mon-logement-limoges.fr" />
 
         <div class="form-row">
           <div class="form-group">
@@ -1671,6 +1779,7 @@
         <ul>
           <li><a href="quartiers-loger-limoges">Quartiers de Limoges</a></li>
           <li><a href="aides-logement-limoges">Aides au logement</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
           <li><a href="#contact">Nous contacter</a></li>
           <li><a href="mentions-legales">Mentions légales</a></li>
         </ul>
@@ -1701,6 +1810,17 @@
     });
   });
 
+  // FAQ accordéon
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+      btn.setAttribute('aria-expanded', !isOpen);
+    });
+  });
+
   // Formulaire contact Formspree
   const contactForm = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
@@ -1710,6 +1830,13 @@
       e.preventDefault();
       submitBtn.disabled = true;
       submitBtn.textContent = 'Envoi en cours…';
+      // ── Double-envoi : Google Sheets (suivi des leads) en parallèle ──
+      const encoded = new URLSearchParams(new FormData(contactForm)).toString();
+      fetch('https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encoded
+      }).catch(() => {});
       try {
         const resp = await fetch('https://formspree.io/f/xlgagzpy', {
           method: 'POST',
