@@ -8,6 +8,9 @@
   <meta name="keywords" content="logement Limoges, location appartement Limoges, T2 Limoges, T3 Limoges, T4 Limoges, maison location Limoges, Begip Limoges, agence immobilière Limoges, location Haute-Vienne" />
   <meta name="google-site-verification" content="iY7NCt7fP_unSMsvPsy6yHzLYklvY7y290YIE4OZ_Eo" />
   <link rel="canonical" href="https://www.mon-logement-limoges.fr/" />
+  <link rel="alternate" hreflang="fr" href="https://www.mon-logement-limoges.fr/" />
+  <link rel="alternate" hreflang="en" href="https://www.mon-logement-limoges.fr/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.mon-logement-limoges.fr/" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,6 +94,11 @@
       transition: color .25s;
     }
     .nav-link:hover { color: var(--ocre-light); }
+    .lang-switch { display: inline-flex; align-items: center; gap: 6px; font-family: 'Inter', sans-serif; font-size: .78rem; font-weight: 600; letter-spacing: .04em; }
+    .lang-switch a { color: rgba(245,240,230,0.55); text-decoration: none; transition: color .2s; }
+    .lang-switch a.active { color: var(--ocre-light); }
+    .lang-switch a:hover { color: var(--ocre-light); }
+    .lang-switch .sep { color: rgba(245,240,230,0.3); }
 
     /* Dropdown sites partenaires */
     .nav-dropdown { position: relative; display: inline-block; }
@@ -1190,6 +1198,7 @@
         <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Begip — Agence <span style="opacity:.5">↗</span></a>
       </div>
     </div>
+    <span class="lang-switch"><a href="/" class="active">FR</a><span class="sep">/</span><a href="/en/">EN</a></span>
     <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
     <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
