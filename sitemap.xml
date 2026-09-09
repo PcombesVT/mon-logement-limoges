@@ -17,6 +17,60 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-47m2-balcon-limoges-sud</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-33m2-rue-de-la-loi-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-33m2-place-des-carmes-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-46m2-hyper-centre-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-32m2-montjovis-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-duplex-place-daine-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t2-35m2-garibaldi-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t3-51m2-terrasse-centre-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/t3-57m2-renove-limoges</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Location T2 Limoges -->
   <url>
     <loc>https://www.mon-logement-limoges.fr/location-t2-limoges</loc>
