@@ -50,6 +50,10 @@
     .hero-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1;}
     .badge-dispo{display:inline-flex;align-items:center;gap:8px;background:rgba(200,161,106,.18);border:1px solid rgba(200,161,106,.4);color:var(--ocre-light);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:7px 16px;border-radius:100px;margin-bottom:22px;}
     .badge-dispo::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--ocre-light);box-shadow:0 0 0 4px rgba(224,191,143,.25);}
+    .badge-dispo.rented{background:rgba(255,107,94,.16);border-color:rgba(255,107,94,.5);color:#ff8a7e;}
+    .badge-dispo.rented::before{background:#ff6b5e;box-shadow:0 0 0 4px rgba(255,107,94,.22);}
+    .rented-banner{max-width:1240px;margin:26px auto 0;background:#fbeae8;border:1px solid #e6a49c;color:#8a2c22;border-radius:8px;padding:16px 24px;text-align:center;font-weight:600;line-height:1.5;}
+    .rented-banner a{color:#8a2c22;text-decoration:underline;font-weight:700;}
     .page-hero h1{font-family:'Fraunces',serif;font-size:clamp(2.1rem,4.4vw,3.5rem);font-weight:500;line-height:1.08;color:var(--stone-soft);margin-bottom:14px;letter-spacing:-.02em;}
     .page-hero h1 em{font-style:italic;color:var(--ocre-light);font-weight:400;}
     .hero-addr{font-size:1rem;color:rgba(245,240,230,.78);margin-bottom:34px;font-weight:300;}
@@ -188,7 +192,7 @@
   <span class="current">T2 duplex 35 m² — place d'Aine</span>
 </div></div>
 <header class="page-hero"><div class="hero-inner">
-  <div class="badge-dispo">Disponible de suite</div>
+  <div class="badge-dispo rented">Déjà reloué — indisponible</div>
   <h1>Beau T2 <em>duplex</em> de 35 m² — centre-ville</h1>
   <p class="hero-addr"><strong>Rue du Balcon</strong> · proche place d'Aine · centre-ville de Limoges · 35 m²</p>
   <div class="hero-stats">
@@ -198,6 +202,7 @@
   </div>
 </div></header>
 <main>
+<div class="rented-banner">🔴 Ce logement a déjà été reloué — il n'est plus disponible. <a href="location-t2-limoges">Voir les T2 actuellement disponibles à Limoges →</a></div>
 <section class="gallery-section"><div class="section-inner">
   <div class="section-tag">La visite en images</div>
   <h2>Un T2 <em>duplex</em> en centre-ville</h2>
@@ -250,7 +255,7 @@
         <div class="dpe" style="background:#cddc39"><div class="t">DPE</div><div class="c">C</div><div class="u">Consommation énergétique</div></div>
         <div class="dpe" style="background:#79b3d9"><div class="t">GES</div><div class="c">B</div><div class="u">Gaz à effet de serre</div></div>
       </div>
-      <a href="#contact" class="price-cta">Demander une visite</a>
+      <a href="location-t2-limoges" class="price-cta">Voir les biens disponibles</a>
       <p class="legal-note">Loyer charges comprises (provisions sur charges, régularisation annuelle). Honoraires TTC à la charge du locataire : 235,83 € — <strong>réduits à 130 € pour les étudiants</strong>. Dépôt de garantie : 1 mois de loyer hors charges (327,54 €). Logement soumis au DPE. Loué vide. Bien géré par Begip.</p>
     </div>
   </div>
@@ -262,7 +267,7 @@
       <p>Situé rue du Balcon, à proximité de la <strong>place d'Aine</strong> et de Winston Churchill, ce <strong>T2 en duplex de 35 m²</strong> occupe le 3ᵉ étage d'un immeuble calme. Il se compose d'une pièce de vie avec <strong>kitchenette équipée</strong> (plaques, réfrigérateur, rangements, évier), d'une salle de bains avec baignoire et WC, et d'une <strong>chambre en duplex</strong>.</p>
       <p>Le logement bénéficie du <strong>double vitrage isolant</strong> et d'un <strong>chauffage individuel électrique</strong>.</p>
       <p>Loyer <strong>351,87 €/mois charges comprises</strong>. Frais d'agence <strong>réduits à 130 € pour les étudiants</strong>, dépôt de garantie d'un mois de loyer hors charges, ALS possible. Appartement visitable dès aujourd'hui avec l'agence Begip, de 9h à 18h.</p>
-      <p>Visite, constitution du dossier et état des lieux numérique pris en charge par l'équipe <strong>Begip</strong>, agence locale à Limoges depuis plus de 30 ans.</p>
+      <p>Visite, constitution du dossier et état des lieux pris en charge par l'équipe <strong>Begip</strong>, agence locale à Limoges depuis plus de 30 ans.</p>
   </div>
 </div></section>
 <section class="faq-section"><div class="section-inner">
