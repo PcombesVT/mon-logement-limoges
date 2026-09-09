@@ -171,8 +171,8 @@
       align-items: center;
       padding: 130px 56px 90px;
     }
-    .hero-announce{position:absolute;top:80px;left:0;right:0;z-index:5;background:rgba(45,68,56,.85);backdrop-filter:blur(10px);border-top:1px solid rgba(200,161,106,.4);border-bottom:1px solid rgba(200,161,106,.4);color:var(--stone-soft);text-align:center;padding:.95rem 2rem;font-size:1.05rem;font-weight:600;line-height:1.4;}
-    .hero-announce .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocre-light);margin-right:.55rem;vertical-align:middle;box-shadow:0 0 10px rgba(224,191,143,.85);}
+    .hero-announce{position:absolute;top:76px;left:0;right:0;z-index:5;background:rgba(45,68,56,.9);backdrop-filter:blur(10px);border-top:1px solid rgba(200,161,106,.45);border-bottom:1px solid rgba(200,161,106,.45);color:var(--stone-soft);text-align:center;padding:1.5rem 2rem;font-size:1.3rem;font-weight:600;line-height:1.45;}
+    .hero-announce .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--ocre-light);margin-right:.6rem;vertical-align:middle;box-shadow:0 0 12px rgba(224,191,143,.9);}
     .hero-announce .ann-date{color:var(--ocre-light);font-weight:700;}
     .hero-announce .ann-msg{transition:opacity .5s ease;}
     .hero-announce .ann-msg a{color:var(--ocre-light);text-decoration:none;font-weight:700;}
@@ -342,12 +342,13 @@
       background: rgba(245, 240, 230, .06);
       border: 1px solid rgba(200, 161, 106, .15);
       border-radius: 4px;
-      padding: 18px 16px;
+      padding: 24px 20px;
       text-decoration: none;
       transition: background .2s, border-color .2s, transform .2s;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 7px;
+      min-height: 132px;
     }
     .type-card:hover {
       background: rgba(200, 161, 106, .12);
@@ -357,14 +358,45 @@
     .type-card .type-name {
       font-family: 'Fraunces', serif;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: var(--stone-soft);
     }
     .type-card .type-sub {
-      font-size: 0.74rem;
+      font-size: 0.78rem;
       color: rgba(245, 240, 230, 0.55);
       letter-spacing: 0.04em;
     }
+    .type-card .type-dispo {
+      margin-top: auto;
+      padding-top: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #ff6b5e;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .type-card .type-dispo::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff6b5e;
+      box-shadow: 0 0 8px rgba(255, 107, 94, .8);
+      animation: dispoPulse 1.8s ease-in-out infinite;
+    }
+    .type-card .type-dispo.none {
+      color: rgba(245, 240, 230, 0.4);
+      font-weight: 600;
+    }
+    .type-card .type-dispo.none::before {
+      background: rgba(245, 240, 230, 0.3);
+      box-shadow: none;
+      animation: none;
+    }
+    @keyframes dispoPulse { 0%,100%{opacity:1;} 50%{opacity:.35;} }
 
     /* ═══════════════════════════════════════════════
        SECTIONS GÉNÉRIQUES
@@ -1251,18 +1283,22 @@
         <a href="location-t2-limoges" class="type-card">
           <span class="type-name">T2</span>
           <span class="type-sub">2 pièces · couples, jeunes actifs</span>
+          <span class="type-dispo" data-type="t2"></span>
         </a>
         <a href="location-t3-limoges" class="type-card">
           <span class="type-name">T3</span>
           <span class="type-sub">3 pièces · petites familles</span>
+          <span class="type-dispo" data-type="t3"></span>
         </a>
-        <a href="#types" class="type-card">
+        <a href="t4-mauvendiere-limoges" class="type-card">
           <span class="type-name">T4 et +</span>
           <span class="type-sub">Grands appartements</span>
+          <span class="type-dispo" data-type="t4"></span>
         </a>
         <a href="#types" class="type-card">
           <span class="type-name">Maisons</span>
           <span class="type-sub">Limoges & alentours</span>
+          <span class="type-dispo" data-type="maison"></span>
         </a>
       </div>
     </div>
@@ -1899,15 +1935,33 @@
 
 <script>
 (function(){
+  /* ═══ DISPOS DU MOMENT — modifier UNIQUEMENT ces chiffres quand un bien est loué ═══ */
+  var DISPO = { t2: 7, t3: 2, t4: 1, maison: 0 };
+  /* ══════════════════════════════════════════════════════════════════════════════ */
+
+  // Compteurs rouges sur les 4 cartes « Que cherchez-vous ? »
+  document.querySelectorAll('.type-dispo').forEach(function(el){
+    var n = DISPO[el.getAttribute('data-type')] || 0;
+    if(n > 0){
+      el.textContent = n + (n>1 ? ' disponibles' : ' disponible');
+    } else {
+      el.textContent = 'Aucune dispo actuellement';
+      el.classList.add('none');
+    }
+  });
+
+  // Bandeau : date du jour + messages qui tournent
   var dt=document.querySelector('.hero-announce .ann-date');
   if(dt){ dt.textContent=new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }
   var msg=document.querySelector('.hero-announce .ann-msg');
   if(!msg) return;
+  var totalApp = DISPO.t2 + DISPO.t3 + DISPO.t4;
   var messages=[
-    'Quelques appartements encore disponibles — T2, T3 et un T4',
+    (totalApp>0 ? totalApp + ' appartements encore disponibles — ' + DISPO.t2 + ' T2, ' + DISPO.t3 + ' T3 et ' + DISPO.t4 + ' T4' : 'Nouvelles disponibilités très bientôt'),
     'Contactez Begip au <a href="tel:0555339750">05&nbsp;55&nbsp;33&nbsp;97&nbsp;50</a> · <a href="mailto:agence@begip.fr">agence@begip.fr</a>'
   ];
   var i=0;
+  msg.innerHTML=messages[0];
   setInterval(function(){
     msg.style.opacity='0';
     setTimeout(function(){ i=(i+1)%messages.length; msg.innerHTML=messages[i]; msg.style.opacity='1'; }, 500);
