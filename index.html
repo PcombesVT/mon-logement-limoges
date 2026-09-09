@@ -171,6 +171,12 @@
       align-items: center;
       padding: 130px 56px 90px;
     }
+    .hero-announce{position:absolute;top:80px;left:0;right:0;z-index:5;background:rgba(45,68,56,.85);backdrop-filter:blur(10px);border-top:1px solid rgba(200,161,106,.4);border-bottom:1px solid rgba(200,161,106,.4);color:var(--stone-soft);text-align:center;padding:.95rem 2rem;font-size:1.05rem;font-weight:600;line-height:1.4;}
+    .hero-announce .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocre-light);margin-right:.55rem;vertical-align:middle;box-shadow:0 0 10px rgba(224,191,143,.85);}
+    .hero-announce .ann-date{color:var(--ocre-light);font-weight:700;}
+    .hero-announce .ann-msg{transition:opacity .5s ease;}
+    .hero-announce .ann-msg a{color:var(--ocre-light);text-decoration:none;font-weight:700;}
+    @media(max-width:768px){.hero-announce{font-size:.9rem;padding:.8rem 1rem;top:66px;}}
 
     /* Décoration : motif pierre / botanique discret */
     .hero::before {
@@ -1227,6 +1233,7 @@
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero">
+  <div class="hero-announce"><span class="dot"></span>Au <span class="ann-date"></span> — <span class="ann-msg">Quelques appartements encore disponibles — T2, T3 et un T4</span></div>
   <div class="hero-inner">
     <div>
       <div class="hero-tag">Begip · Limoges depuis + de 30 ans</div>
@@ -1890,5 +1897,22 @@
   }
 </script>
 
+<script>
+(function(){
+  var dt=document.querySelector('.hero-announce .ann-date');
+  if(dt){ dt.textContent=new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }
+  var msg=document.querySelector('.hero-announce .ann-msg');
+  if(!msg) return;
+  var messages=[
+    'Quelques appartements encore disponibles — T2, T3 et un T4',
+    'Contactez Begip au <a href="tel:0555339750">05&nbsp;55&nbsp;33&nbsp;97&nbsp;50</a> · <a href="mailto:agence@begip.fr">agence@begip.fr</a>'
+  ];
+  var i=0;
+  setInterval(function(){
+    msg.style.opacity='0';
+    setTimeout(function(){ i=(i+1)%messages.length; msg.innerHTML=messages[i]; msg.style.opacity='1'; }, 500);
+  }, 4500);
+})();
+</script>
 </body>
 </html>
