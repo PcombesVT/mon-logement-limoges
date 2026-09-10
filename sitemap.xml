@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Location d'appartement (hub) -->
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/location-appartement-limoges</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Annonce T4 rue de la Mauvendière -->
   <url>
     <loc>https://www.mon-logement-limoges.fr/t4-mauvendiere-limoges</loc>
