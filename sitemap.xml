@@ -122,6 +122,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/investir-immobilier-limoges</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Aides au logement Limoges -->
   <url>
@@ -168,6 +174,12 @@
   </url>
   <url>
     <loc>https://www.mon-logement-limoges.fr/en/quartiers-loger-limoges</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mon-logement-limoges.fr/en/investir-immobilier-limoges</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
