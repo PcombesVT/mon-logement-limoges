@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investing in rental property in Limoges — Guide & Begip support</title>
   <meta name="description" content="Why and how to invest in rental property in Limoges? Strong student and hospital demand, affordable prices, good yields. Begip supports you from purchase to rental management. A local agency, over 35 years of experience." />
-  <meta name="keywords" content="invest property Limoges, buy to let Limoges, rental investment Limoges, rental yield Limoges, invest student studio Limoges, rental management Limoges, Begip Limoges" />
+  <meta name="keywords" content="invest property Limoges, buy to let Limoges, rental investment Limoges, rental yield Limoges, invest student studio Limoges, LMNP Limoges, Denormandie Limoges, property tax relief Limoges, rental management Limoges, Begip Limoges" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://www.mon-logement-limoges.fr/en/investir-immobilier-limoges" />
   <link rel="alternate" hreflang="fr" href="https://www.mon-logement-limoges.fr/investir-immobilier-limoges" />
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mon-logement-limoges.fr/en/"},
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mon-logement-limoges.fr/en"},
       {"@type": "ListItem", "position": 2, "name": "Investing in Limoges", "item": "https://www.mon-logement-limoges.fr/en/investir-immobilier-limoges.html"}
     ]
   }
@@ -52,6 +52,16 @@
         "@type": "Question",
         "name": "Do you need to live in Limoges to invest there?",
         "acceptedAnswer": { "@type": "Answer", "text": "No. Many investors buy in Limoges without living there, precisely because a local agency like Begip takes over on the ground: knowledge of the market and districts, property selection, letting and day-to-day management. You steer your investment remotely with peace of mind." }
+      },
+      {
+        "@type": "Question",
+        "name": "What rental yield can you expect in Limoges?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Limoges shows one of the best gross rental yields in France, driven by low purchase prices (around €1,600/m² for a flat in mid-2026) and stable rents (around €11.7/m²). Depending on the size and district, the gross yield is often between 6 and 9%, with studios near the campuses generally at the top of the range. These figures are indicative and stated before charges, tax and vacancy: Begip gives you a precise estimate property by property." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you invest under Denormandie or LMNP in Limoges?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Limoges is an Action Cœur de Ville town, which makes it eligible for the Denormandie scheme (buying an older city-centre property to renovate, then let, with a tax reduction) — it is even among the most eligible towns in France. The LMNP status (furnished letting) suits the studios and one-room flats that are plentiful in Limoges. Begip helps you target the property; for the tax structuring, seek specialist advice (an accountant or wealth-management adviser)." }
       }
     ]
   }
@@ -130,6 +140,19 @@
     .q-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;color:var(--sage-deep);margin-bottom:10px;line-height:1.2;}
     .q-desc{font-size:.92rem;color:var(--ink-soft);line-height:1.75;}
 
+    /* MARKET IN FIGURES */
+    .stats-section{background:var(--stone);}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 24px;text-align:center;}
+    .stat-num{font-family:'Fraunces',serif;font-weight:600;font-size:2.1rem;color:var(--sage-deep);line-height:1.05;}
+    .stat-num small{font-size:1rem;color:var(--ocre-deep);font-weight:600;}
+    .stat-label{font-size:.84rem;color:var(--muted);margin-top:12px;line-height:1.5;}
+    .stat-badge{font-family:'Fraunces',serif;font-weight:600;font-size:1.4rem;color:var(--ocre-deep);line-height:1.1;}
+    .stat-note{font-size:.82rem;color:var(--muted);margin-top:30px;font-style:italic;max-width:760px;}
+    .prix-quartiers{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+    .prix-tag{background:var(--stone-warm);color:var(--sage);font-size:.8rem;font-weight:500;padding:.35rem .85rem;border-radius:20px;border:1px solid var(--line);}
+    .prix-tag strong{color:var(--sage-deep);}
+
     .conseil-section{background:var(--sage-deep);color:var(--stone-soft);}
     .conseil-section .section-tag{color:var(--ocre-light);}
     .conseil-section .section-tag::before{background:var(--ocre-light);}
@@ -179,6 +202,7 @@
       .page-hero::after{display:none;}
       section{padding:70px 24px;}
       .quartiers-grid{grid-template-columns:1fr;}
+      .stats-grid{grid-template-columns:1fr 1fr;}
       .conseils-grid{grid-template-columns:1fr;}
       .footer-top{grid-template-columns:1fr 1fr;gap:36px;}
       .cta-section{padding:70px 24px;}
@@ -188,7 +212,7 @@
 <body>
 
 <nav aria-label="Main navigation">
-  <a href="/en/" class="nav-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></a>
+  <a href="/en" class="nav-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></a>
   <div class="nav-right">
     <a href="index.html#types" class="nav-link">Housing types</a>
     <a href="quartiers-loger-limoges" class="nav-link">Districts</a>
@@ -201,7 +225,7 @@
 
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
-    <a href="/en/">Home</a>
+    <a href="/en">Home</a>
     <span class="sep">›</span>
     <span class="current">Investing in Limoges</span>
   </div>
@@ -250,6 +274,41 @@
   </div>
 </section>
 
+<!-- MARKET IN FIGURES -->
+<section class="stats-section">
+  <div class="section-inner">
+    <div class="section-tag">The market in figures</div>
+    <h2>What it costs, <em>what it returns</em></h2>
+    <p class="section-sub">A few orders of magnitude to place rental investment in Limoges (mid-2026). Low purchase prices, stable rents: hence a yield among the highest of French cities.</p>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">~1,600 <small>€/m²</small></div>
+        <div class="stat-label">Average purchase price of a flat — among the lowest of France's larger cities</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~11.7 <small>€/m²</small></div>
+        <div class="stat-label">Average monthly rent for a flat, stable year on year</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6 to 9 <small>%</small></div>
+        <div class="stat-label">Indicative gross rental yield*, often at the top for studios</div>
+      </div>
+      <div class="stat">
+        <div class="stat-badge">Denormandie<br>eligible</div>
+        <div class="stat-label">Limoges is an Action Cœur de Ville town: renovated older property qualifies for tax relief</div>
+      </div>
+    </div>
+    <div class="prix-quartiers">
+      <span class="prix-tag">Vanteaux <strong>~€1,350/m²</strong></span>
+      <span class="prix-tag">Landouge <strong>~€1,400/m²</strong></span>
+      <span class="prix-tag">City centre <strong>~€1,700–1,800/m²</strong></span>
+      <span class="prix-tag">Station <strong>~€1,800/m²</strong></span>
+      <span class="prix-tag">Les Émailleurs <strong>~€2,100/m²</strong></span>
+    </div>
+    <p class="stat-note">* Indicative orders of magnitude (market sources, mid-2026), before charges, tax and vacancy; they vary with the property, its condition and the district. Begip gives you a precise estimate, property by property.</p>
+  </div>
+</section>
+
 <!-- WHERE / WHAT -->
 <section>
   <div class="section-inner prose-narrow">
@@ -258,6 +317,38 @@
     <p>The right investment depends on the tenant you're targeting — and each district of Limoges has its own demand:</p>
     <p><strong>Studios &amp; one-room flats near the campuses</strong> (La Borie, Vanteaux, Isle/Marcland) and the centre: the student target, the largest in Limoges, with regular turnover and some of the highest rents per m². <strong>Two- &amp; three-room flats in the centre</strong> or residential districts: young professionals, couples, hospital staff. <strong>Houses on the outskirts</strong> (Landouge, northern areas): families looking for space and stability.</p>
     <p>To choose the right area, lean on our <a href="quartiers-loger-limoges">guide to the districts of Limoges</a>: atmosphere, tenant profile and housing type for each.</p>
+  </div>
+</section>
+
+<!-- SCHEMES & TAX -->
+<section class="quartiers-section">
+  <div class="section-inner">
+    <div class="section-tag">Schemes &amp; tax</div>
+    <h2>Optimising your <em>rental investment</em> in Limoges</h2>
+    <p class="section-sub">Several tax frameworks suit the Limoges market especially well — small student units and older city-centre buildings. Here are the main ones.</p>
+
+    <div class="quartiers-grid">
+      <div class="quartier-card">
+        <div class="q-icon">🛋️</div>
+        <div class="q-name">LMNP — furnished letting</div>
+        <p class="q-desc">Letting furnished — ideal for the studios and one-room flats in high demand from Limoges students — opens the LMNP status (Loueur Meublé Non Professionnel). Depreciation of the property and furniture often sharply reduces, or even cancels, the tax on rental income for several years. It's the most common structure for small units near the campuses.</p>
+      </div>
+      <div class="quartier-card">
+        <div class="q-icon">🏛️</div>
+        <div class="q-name">Denormandie — renovated older property</div>
+        <p class="q-desc">Limoges is an <strong>Action Cœur de Ville</strong> town: it is among the most eligible in France for the Denormandie scheme. By buying an older city-centre property to renovate (works ≥ 25% of the total cost) and letting it, you benefit from a tax reduction — while bringing fine Limoges building stock back to the market.</p>
+      </div>
+      <div class="quartier-card">
+        <div class="q-icon">🔧</div>
+        <div class="q-name">Property deficit (déficit foncier)</div>
+        <p class="q-desc">With unfurnished letting, deductible renovation costs can exceed the rent and create a property deficit, offset against your overall income (within legal limits). An efficient lever to renovate an older city-centre flat while cutting your tax.</p>
+      </div>
+      <div class="quartier-card">
+        <div class="q-icon">🤝</div>
+        <div class="q-name">Begip's support</div>
+        <p class="q-desc">Begip guides you on the property, the district and the rental potential, then handles letting and management. For the tax structuring itself (LMNP, Denormandie, property deficit), we recommend the support of an accountant or a wealth-management adviser to secure your project.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -308,6 +399,14 @@
       <div class="faq-item">
         <div class="faq-q">Do you need to live in Limoges to invest there?</div>
         <div class="faq-a">No. Many investors buy in Limoges without living there, precisely because a local agency like Begip takes over on the ground: knowledge of the market and districts, property selection, letting and day-to-day management. You steer your investment remotely with peace of mind.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What rental yield can you expect in Limoges?</div>
+        <div class="faq-a">Limoges shows one of the best gross rental yields in France, driven by low purchase prices (around €1,600/m² for a flat in mid-2026) and stable rents (around €11.7/m²). Depending on the size and district, the gross yield is often between 6 and 9%, with studios near the campuses generally at the top of the range. These figures are indicative and stated before charges, tax and vacancy: Begip gives you a precise estimate property by property.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you invest under Denormandie or LMNP in Limoges?</div>
+        <div class="faq-a">Yes. Limoges is an Action Cœur de Ville town, which makes it eligible for the Denormandie scheme (buying an older city-centre property to renovate, then let, with a tax reduction) — it is even among the most eligible towns in France. The LMNP status (furnished letting) suits the studios and one-room flats that are plentiful in Limoges. Begip helps you target the property; for the tax structuring, seek specialist advice (an accountant or wealth-management adviser).</div>
       </div>
     </div>
   </div>
