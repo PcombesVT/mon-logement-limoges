@@ -28,6 +28,44 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which is the best district in Limoges to live in?",
+        "acceptedAnswer": {"@type": "Answer", "text": "There is no single \"best\" district: it depends on your situation. For a lively, walk-everywhere life, the city centre and the Bénédictins station area. For quiet and greenery, Vanteaux or Landouge. For unbeatable value near the health campus, Isle. For families wanting space, Les Émailleurs or the north of Limoges. Begip manages properties in each of these areas and guides you according to your budget and lifestyle."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the residential districts of Limoges?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The most residential districts of Limoges are Vanteaux (south-west, leafy), Landouge (west, village feel), Les Émailleurs (east, upmarket) and the northern areas (Carnot). They offer quiet, green space and a good balance of flats and houses with gardens — very popular with families and professionals."}
+      },
+      {
+        "@type": "Question",
+        "name": "Where to live in Limoges as a student?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The student areas of Limoges depend on your campus. La Borie hosts the University Meissonier and Dutreix residences near the science and law faculties. Isle and the Marcland area are ideal for medicine, pharmacy and the nursing school (E-Magine residence). Vanteaux suits the Faculty of Arts and the ENSAD. The city centre stays central for every campus."}
+      },
+      {
+        "@type": "Question",
+        "name": "Where to live in Limoges as a family?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For a family, Limoges offers several quiet districts with schools, shops and green space: Vanteaux, Landouge, Les Émailleurs and the northern areas provide large flats (three- and four-room) and houses with gardens at manageable rents. The neighbouring towns of the Haute-Vienne widen the choice further for those seeking more space."}
+      },
+      {
+        "@type": "Question",
+        "name": "In which areas of Limoges does Begip manage housing?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Begip manages flats and houses in most districts of Limoges: the city centre, the Bénédictins station area, Vanteaux, La Borie, Les Émailleurs, Landouge and the north of the city, as well as in Isle (E-Magine residence) and in five towns of the Haute-Vienne (Nantiat, Bellac, Compreignac, Chamboret, Chaptelat). This local presence of over 35 years means we can offer properties in almost every area."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is Limoges a pleasant place to live?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Limoges is a human-scale city (around 130,000 inhabitants) known for its quality of life: housing costs among the lowest of France's larger cities, plenty of green space and rivers, low density, and a complete university and hospital offering. Everything is reachable in under 20 minutes, making it a pleasant city to study, work or raise a family."}
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -116,6 +154,19 @@
     .conseil-item{padding-top:24px;border-top:1px solid rgba(200,161,106,.2);}
     .conseil-item h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;color:var(--stone-soft);margin-bottom:8px;}
     .conseil-item p{font-size:.88rem;color:rgba(245,240,230,.65);line-height:1.7;}
+
+    /* FAQ */
+    .faq-section{background:var(--stone-soft);}
+    .faq-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:4px;overflow:hidden;max-width:840px;}
+    .faq-item{background:#fff;}
+    .faq-item+.faq-item{border-top:1px solid var(--line);}
+    .faq-q{padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .faq-q h3{font-size:.95rem;font-weight:600;color:var(--sage-deep);line-height:1.45;}
+    .faq-arrow{flex-shrink:0;color:var(--ocre-deep);font-size:.8rem;transition:transform .3s;}
+    .faq-item.open .faq-arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-a-inner{padding:0 1.5rem 1.2rem;font-size:.9rem;color:var(--muted);line-height:1.75;}
+    .faq-item.open .faq-a{max-height:420px;}
 
     .cta-section{background:var(--stone-warm);text-align:center;padding:100px 56px;}
     .cta-section h2{max-width:720px;margin:0 auto 20px;}
@@ -364,6 +415,41 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-tag">Frequently asked questions</div>
+    <h2>Districts of Limoges — <em>your questions</em></h2>
+    <p class="section-sub">The questions most often asked when choosing where to live in Limoges.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><h3>Which is the best district in Limoges to live in?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">There is no single "best" district: it depends on your situation. For a lively, walk-everywhere life, the city centre and the Bénédictins station area. For quiet and greenery, Vanteaux or Landouge. For unbeatable value near the health campus, Isle. For families wanting space, Les Émailleurs or the north of Limoges. Begip manages properties in each of these areas and guides you according to your budget and lifestyle.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>What are the residential districts of Limoges?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The most residential districts of Limoges are Vanteaux (south-west, leafy), Landouge (west, village feel), Les Émailleurs (east, upmarket) and the northern areas (Carnot). They offer quiet, green space and a good balance of flats and houses with gardens — very popular with families and professionals.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Where to live in Limoges as a student?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The student areas of Limoges depend on your campus. La Borie hosts the University Meissonier and Dutreix residences near the science and law faculties. Isle and the Marcland area are ideal for medicine, pharmacy and the nursing school (E-Magine residence). Vanteaux suits the Faculty of Arts and the ENSAD. The city centre stays central for every campus.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Where to live in Limoges as a family?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">For a family, Limoges offers several quiet districts with schools, shops and green space: Vanteaux, Landouge, Les Émailleurs and the northern areas provide large flats (three- and four-room) and houses with gardens at manageable rents. The neighbouring towns of the Haute-Vienne widen the choice further for those seeking more space.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>In which areas of Limoges does Begip manage housing?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Begip manages flats and houses in most districts of Limoges: the city centre, the Bénédictins station area, Vanteaux, La Borie, Les Émailleurs, Landouge and the north of the city, as well as in Isle (E-Magine residence) and in five towns of the Haute-Vienne (Nantiat, Bellac, Compreignac, Chamboret, Chaptelat). This local presence of over 35 years means we can offer properties in almost every area.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Is Limoges a pleasant place to live?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Limoges is a human-scale city (around 130,000 inhabitants) known for its quality of life: housing costs among the lowest of France's larger cities, plenty of green space and rivers, low density, and a complete university and hospital offering. Everything is reachable in under 20 minutes, making it a pleasant city to study, work or raise a family.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <section class="cta-section">
@@ -416,5 +502,16 @@
     <div class="footer-copy">© 2026 mon-logement-limoges.fr · A site in the Begip Limoges network · over 35 years of local experience</div>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
 </body>
 </html>
