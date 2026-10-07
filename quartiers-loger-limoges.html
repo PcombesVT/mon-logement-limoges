@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quartiers de Limoges pour se loger — Guide complet | Begip</title>
+  <title>Les meilleurs quartiers de Limoges pour se loger — Guide 2026 | Begip</title>
   <meta name="description" content="Quel quartier choisir pour se loger à Limoges ? Centre-ville, gare des Bénédictins, Vanteaux, La Borie, Isle, Landouge, Les Émailleurs… Guide complet des secteurs de Limoges par Begip, agence locale." />
   <meta name="keywords" content="quartier limoges logement, où habiter limoges, vivre à limoges quartier, centre-ville limoges, gare bénédictins limoges, vanteaux limoges, la borie limoges, isle limoges, landouge limoges, émailleurs limoges, begip limoges" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -25,6 +25,44 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.mon-logement-limoges.fr/"},
       {"@type": "ListItem", "position": 2, "name": "Quartiers de Limoges", "item": "https://www.mon-logement-limoges.fr/quartiers-loger-limoges.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le meilleur quartier de Limoges pour se loger ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Il n'y a pas un seul « meilleur » quartier : cela dépend de votre situation. Pour une vie animée et tout à pied, le centre-ville et la gare des Bénédictins. Pour le calme et la verdure, Vanteaux ou Landouge. Pour un rapport qualité-prix imbattable près du campus santé, Isle. Pour les familles cherchant de l'espace, les Émailleurs ou le nord de Limoges. Begip gère des biens dans chacun de ces secteurs et vous oriente selon votre budget et votre mode de vie."}
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les quartiers résidentiels de Limoges ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Les quartiers les plus résidentiels de Limoges sont Vanteaux (sud-ouest, verdoyant), Landouge (ouest, ambiance village), Les Émailleurs (est, standing) et les secteurs nord (Carnot). Ils offrent calme, espaces verts et un bon équilibre entre appartements et maisons avec jardin — très appréciés des familles et des actifs."}
+      },
+      {
+        "@type": "Question",
+        "name": "Où habiter à Limoges quand on est étudiant ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Les secteurs étudiants de Limoges dépendent de votre campus. La Borie accueille les résidences University Meissonier et Dutreix près des facs de sciences et de droit. Isle et le secteur Marcland sont idéaux pour médecine, pharmacie et l'IFSI (résidence E-Magine). Vanteaux convient à la Fac des Lettres et à l'ENSAD. Le centre-ville reste central pour tous les campus."}
+      },
+      {
+        "@type": "Question",
+        "name": "Où habiter à Limoges en famille ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Pour une famille, Limoges offre plusieurs quartiers calmes avec écoles, commerces et espaces verts : Vanteaux, Landouge, Les Émailleurs et les secteurs nord proposent de grands appartements (T3, T4) et des maisons avec jardin à des loyers maîtrisés. Les communes limitrophes de la Haute-Vienne élargissent encore le choix pour qui cherche plus d'espace."}
+      },
+      {
+        "@type": "Question",
+        "name": "Dans quels secteurs de Limoges Begip gère-t-il des logements ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Begip gère des appartements et des maisons dans la plupart des quartiers de Limoges : centre-ville, gare des Bénédictins, Vanteaux, La Borie, Les Émailleurs, Landouge et le nord de la ville, ainsi qu'à Isle (résidence E-Magine) et dans cinq communes de la Haute-Vienne (Nantiat, Bellac, Compreignac, Chamboret, Chaptelat). Cet ancrage local depuis plus de 35 ans permet de proposer des biens dans presque tous les secteurs."}
+      },
+      {
+        "@type": "Question",
+        "name": "Est-ce agréable de vivre à Limoges ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Limoges est une ville à taille humaine (environ 130 000 habitants) réputée pour son cadre de vie : coût du logement parmi les plus bas des grandes villes françaises, nombreux espaces verts et rivières, faible densité, et une offre universitaire et hospitalière complète. Tout y est accessible en moins de 20 minutes, ce qui en fait une ville agréable pour étudier, travailler ou fonder une famille."}
+      }
     ]
   }
   </script>
@@ -116,6 +154,19 @@
     .conseil-item{padding-top:24px;border-top:1px solid rgba(200,161,106,.2);}
     .conseil-item h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;color:var(--stone-soft);margin-bottom:8px;}
     .conseil-item p{font-size:.88rem;color:rgba(245,240,230,.65);line-height:1.7;}
+
+    /* FAQ */
+    .faq-section{background:var(--stone-soft);}
+    .faq-list{display:flex;flex-direction:column;gap:1px;border:1px solid var(--line);border-radius:4px;overflow:hidden;max-width:840px;}
+    .faq-item{background:#fff;}
+    .faq-item+.faq-item{border-top:1px solid var(--line);}
+    .faq-q{padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .faq-q h3{font-size:.95rem;font-weight:600;color:var(--sage-deep);line-height:1.45;}
+    .faq-arrow{flex-shrink:0;color:var(--ocre-deep);font-size:.8rem;transition:transform .3s;}
+    .faq-item.open .faq-arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-a-inner{padding:0 1.5rem 1.2rem;font-size:.9rem;color:var(--muted);line-height:1.75;}
+    .faq-item.open .faq-a{max-height:420px;}
 
     .cta-section{background:var(--stone-warm);text-align:center;padding:100px 56px;}
     .cta-section h2{max-width:720px;margin:0 auto 20px;}
@@ -364,6 +415,41 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-tag">Questions fréquentes</div>
+    <h2>Quartiers de Limoges — <em>vos questions</em></h2>
+    <p class="section-sub">Les questions les plus posées pour choisir où se loger à Limoges.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><h3>Quel est le meilleur quartier de Limoges pour se loger ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Il n'y a pas un seul « meilleur » quartier : cela dépend de votre situation. Pour une vie animée et tout à pied, le centre-ville et la gare des Bénédictins. Pour le calme et la verdure, Vanteaux ou Landouge. Pour un rapport qualité-prix imbattable près du campus santé, Isle. Pour les familles cherchant de l'espace, les Émailleurs ou le nord de Limoges. Begip gère des biens dans chacun de ces secteurs et vous oriente selon votre budget et votre mode de vie.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Quels sont les quartiers résidentiels de Limoges ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Les quartiers les plus résidentiels de Limoges sont Vanteaux (sud-ouest, verdoyant), Landouge (ouest, ambiance village), Les Émailleurs (est, standing) et les secteurs nord (Carnot). Ils offrent calme, espaces verts et un bon équilibre entre appartements et maisons avec jardin — très appréciés des familles et des actifs.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Où habiter à Limoges quand on est étudiant ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Les secteurs étudiants de Limoges dépendent de votre campus. La Borie accueille les résidences University Meissonier et Dutreix près des facs de sciences et de droit. Isle et le secteur Marcland sont idéaux pour médecine, pharmacie et l'IFSI (résidence E-Magine). Vanteaux convient à la Fac des Lettres et à l'ENSAD. Le centre-ville reste central pour tous les campus.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Où habiter à Limoges en famille ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Pour une famille, Limoges offre plusieurs quartiers calmes avec écoles, commerces et espaces verts : Vanteaux, Landouge, Les Émailleurs et les secteurs nord proposent de grands appartements (T3, T4) et des maisons avec jardin à des loyers maîtrisés. Les communes limitrophes de la Haute-Vienne élargissent encore le choix pour qui cherche plus d'espace.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Dans quels secteurs de Limoges Begip gère-t-il des logements ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Begip gère des appartements et des maisons dans la plupart des quartiers de Limoges : centre-ville, gare des Bénédictins, Vanteaux, La Borie, Les Émailleurs, Landouge et le nord de la ville, ainsi qu'à Isle (résidence E-Magine) et dans cinq communes de la Haute-Vienne (Nantiat, Bellac, Compreignac, Chamboret, Chaptelat). Cet ancrage local depuis plus de 35 ans permet de proposer des biens dans presque tous les secteurs.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Est-ce agréable de vivre à Limoges ?</h3><span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Limoges est une ville à taille humaine (environ 130 000 habitants) réputée pour son cadre de vie : coût du logement parmi les plus bas des grandes villes françaises, nombreux espaces verts et rivières, faible densité, et une offre universitaire et hospitalière complète. Tout y est accessible en moins de 20 minutes, ce qui en fait une ville agréable pour étudier, travailler ou fonder une famille.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <section class="cta-section">
@@ -416,5 +502,16 @@
     <div class="footer-copy">© 2026 mon-logement-limoges.fr · Un site du réseau Begip Limoges · plus de 35 ans d'expérience locale</div>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
 </body>
 </html>
