@@ -147,6 +147,12 @@
 
   <!-- Quartiers de Limoges -->
   <url>
+    <loc>https://www.mon-logement-limoges.fr/logement-centre-ville-limoges</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.mon-logement-limoges.fr/logement-quartier-emailleurs-limoges</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
