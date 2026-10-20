@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Logement Limoges — Location appartements, maisons & logements à Limoges | Begip</title>
-  <meta name="description" content="Trouvez votre logement à Limoges avec Begip : appartements T2, T3, T4 et maisons à louer dans le centre-ville, les quartiers résidentiels et l'agglomération de Limoges. plus de 35 ans d'expérience locale." />
-  <meta name="keywords" content="logement Limoges, location appartement Limoges, T2 Limoges, T3 Limoges, T4 Limoges, maison location Limoges, Begip Limoges, agence immobilière Limoges, location Haute-Vienne" />
+  <title>Mon Logement Limoges — Flats & Houses to Rent in Limoges | Begip</title>
+  <meta name="description" content="Find your home in Limoges with Begip: T2, T3, T4 flats and houses to rent in the city centre, the residential districts and the Limoges area. over 35 years of local experience." />
+  <meta name="keywords" content="housing Limoges, flat rental Limoges, T2 Limoges, T3 Limoges, T4 Limoges, house rental Limoges, Begip Limoges, estate agency Limoges, rental Haute-Vienne" />
   <meta name="google-site-verification" content="iY7NCt7fP_unSMsvPsy6yHzLYklvY7y290YIE4OZ_Eo" />
-  <link rel="canonical" href="https://www.mon-logement-limoges.fr/" />
+  <link rel="canonical" href="https://www.mon-logement-limoges.fr/en" />
   <link rel="alternate" hreflang="fr" href="https://www.mon-logement-limoges.fr/" />
   <link rel="alternate" hreflang="en" href="https://www.mon-logement-limoges.fr/en" />
   <link rel="alternate" hreflang="x-default" href="https://www.mon-logement-limoges.fr/" />
@@ -166,19 +166,13 @@
       min-height: 100vh;
       background:
         linear-gradient(165deg, rgba(45,68,56,.78) 0%, rgba(61,90,74,.66) 55%, rgba(93,122,105,.54) 100%),
-        url('photos/hero/facades-limoges.jpg') center 30% / cover no-repeat;
+        url('../photos/hero/facades-limoges.jpg') center 30% / cover no-repeat;
       position: relative;
       overflow: hidden;
       display: flex;
       align-items: center;
       padding: 130px 56px 90px;
     }
-    .hero-announce{position:absolute;top:76px;left:0;right:0;z-index:5;background:rgba(45,68,56,.9);backdrop-filter:blur(10px);border-top:1px solid rgba(200,161,106,.45);border-bottom:1px solid rgba(200,161,106,.45);color:var(--stone-soft);text-align:center;padding:1.5rem 2rem;font-size:1.3rem;font-weight:600;line-height:1.45;}
-    .hero-announce .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--ocre-light);margin-right:.6rem;vertical-align:middle;box-shadow:0 0 12px rgba(224,191,143,.9);}
-    .hero-announce .ann-date{color:var(--ocre-light);font-weight:700;}
-    .hero-announce .ann-msg{transition:opacity .5s ease;}
-    .hero-announce .ann-msg a{color:var(--ocre-light);text-decoration:none;font-weight:700;}
-    @media(max-width:768px){.hero-announce{font-size:.9rem;padding:.8rem 1rem;top:66px;}}
 
     /* Décoration : motif pierre / botanique discret */
     .hero::before {
@@ -345,13 +339,12 @@
       background: rgba(245, 240, 230, .06);
       border: 1px solid rgba(200, 161, 106, .15);
       border-radius: 4px;
-      padding: 24px 20px;
+      padding: 18px 16px;
       text-decoration: none;
       transition: background .2s, border-color .2s, transform .2s;
       display: flex;
       flex-direction: column;
-      gap: 7px;
-      min-height: 132px;
+      gap: 6px;
     }
     .type-card:hover {
       background: rgba(200, 161, 106, .12);
@@ -361,45 +354,14 @@
     .type-card .type-name {
       font-family: 'Fraunces', serif;
       font-weight: 600;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       color: var(--stone-soft);
     }
     .type-card .type-sub {
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       color: rgba(245, 240, 230, 0.55);
       letter-spacing: 0.04em;
     }
-    .type-card .type-dispo {
-      margin-top: auto;
-      padding-top: 10px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #ff6b5e;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .type-card .type-dispo::before {
-      content: "";
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #ff6b5e;
-      box-shadow: 0 0 8px rgba(255, 107, 94, .8);
-      animation: dispoPulse 1.8s ease-in-out infinite;
-    }
-    .type-card .type-dispo.none {
-      color: rgba(245, 240, 230, 0.4);
-      font-weight: 600;
-    }
-    .type-card .type-dispo.none::before {
-      background: rgba(245, 240, 230, 0.3);
-      box-shadow: none;
-      animation: none;
-    }
-    @keyframes dispoPulse { 0%,100%{opacity:1;} 50%{opacity:.35;} }
 
     /* ═══════════════════════════════════════════════
        SECTIONS GÉNÉRIQUES
@@ -1201,11 +1163,11 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Faut-il un garant pour louer un logement à Limoges ?", "acceptedAnswer": { "@type": "Answer", "text": "Un garant est généralement demandé. Si vous n'en avez pas, la garantie Visale (gratuite, proposée par Action Logement) peut le remplacer, et d'autres solutions de caution sont étudiées au cas par cas. Begip vous oriente vers le dispositif adapté à votre situation." } },
-      { "@type": "Question", "name": "Quels sont les frais d'agence chez Begip ?", "acceptedAnswer": { "@type": "Answer", "text": "Les honoraires de location sont encadrés par la loi (plafonnés selon la surface du logement) et vous sont indiqués clairement dès la prise de contact. Pas de frais cachés." } },
-      { "@type": "Question", "name": "Les logements sont-ils meublés ou vides ?", "acceptedAnswer": { "@type": "Answer", "text": "Les deux, selon les biens. Begip gère des appartements et des maisons vides comme meublés à Limoges et en Haute-Vienne. Précisez votre préférence, nous vous proposons ce qui correspond." } },
-      { "@type": "Question", "name": "Comment se passe l'état des lieux ?", "acceptedAnswer": { "@type": "Answer", "text": "Begip réalise les états des lieux d'entrée et de sortie avec soin, photos à l'appui (sur tablette avec signature électronique lorsque c'est possible). Le compte-rendu complet vous est transmis par e-mail dès notre retour à l'agence, généralement sous 24 à 48 h." } },
-      { "@type": "Question", "name": "Quels documents pour constituer mon dossier ?", "acceptedAnswer": { "@type": "Answer", "text": "Pièce d'identité, justificatif de domicile, contrat de travail (ou équivalent), 3 derniers bulletins de salaire (ou justificatif de ressources) et dernier avis d'imposition. Les mêmes pièces sont demandées pour le garant. Le RIB n'est demandé que si vous choisissez le paiement par prélèvement. Notre équipe vous accompagne dans le montage du dossier." } }
+      { "@type": "Question", "name": "Do you need a guarantor to rent a home in Limoges?", "acceptedAnswer": { "@type": "Answer", "text": "A guarantor is usually required. If you don't have one, the Visale guarantee (free, from Action Logement) can replace it, and other guarantee solutions are considered case by case. Begip guides you to the scheme suited to your situation." } },
+      { "@type": "Question", "name": "What are Begip's agency fees?", "acceptedAnswer": { "@type": "Answer", "text": "Rental fees are capped by law (based on the home's size) and are stated clearly from first contact. No hidden fees." } },
+      { "@type": "Question", "name": "Are the homes furnished or unfurnished?", "acceptedAnswer": { "@type": "Answer", "text": "Both, depending on the property. Begip manages flats and houses furnished and unfurnished in Limoges and the Haute-Vienne. Tell us your preference and we'll suggest what fits." } },
+      { "@type": "Question", "name": "How does the inventory work?", "acceptedAnswer": { "@type": "Answer", "text": "Begip carries out check-in and check-out inventories carefully, backed by photos (on tablet with electronic signature where available). The full report is sent to you by email once we are back at the agency, usually within 24 to 48 hours." } },
+      { "@type": "Question", "name": "What documents do I need for my application?", "acceptedAnswer": { "@type": "Answer", "text": "ID, proof of address, employment contract (or equivalent), your last 3 payslips (or proof of income) and your latest tax notice. The same documents are required for the guarantor. Bank details (RIB) are only requested if you choose to pay by direct debit. Our team helps you put the application together." } }
     ]
   }
   </script>
@@ -1214,35 +1176,35 @@
 
 <!-- ═══════════════════ NAV ═══════════════════ -->
 <nav aria-label="Navigation principale">
-  <a href="/" class="nav-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></a>
+  <a href="/en" class="nav-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></a>
   <div class="nav-right">
-    <a href="#types" class="nav-link">Voir les logements</a>
-    <a href="quartiers-loger-limoges" class="nav-link">Quartiers</a>
-    <a href="investir-immobilier-limoges" class="nav-link">Investir</a>
-    <a href="aides-logement-limoges" class="nav-link">Aides</a>
-    <a href="louer-son-bien-limoges" class="nav-link">Propriétaires</a>
+    <a href="#types" class="nav-link">See the homes</a>
+    <a href="/en/quartiers-loger-limoges" class="nav-link">Districts</a>
+    <a href="/en/investir-immobilier-limoges" class="nav-link">Investing</a>
+    <a href="/en/aides-logement-limoges" class="nav-link">Housing benefit</a>
+    <a href="/en/louer-son-bien-limoges" class="nav-link">Landlords</a>
     <div class="nav-dropdown" id="dd-decouvrir">
-      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Découvrir <span class="nav-caret">▾</span></button>
+      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Discover <span class="nav-caret">▾</span></button>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="vivre-a-limoges" role="menuitem">Vivre à Limoges</a>
-        <a href="haute-vienne-campagne-nature" role="menuitem">Haute-Vienne — Nature & vie</a>
+        <a href="/en/vivre-a-limoges" role="menuitem">Living in Limoges</a>
+        <a href="/en/haute-vienne-campagne-nature" role="menuitem">Haute-Vienne — Nature & life</a>
       </div>
     </div>
     <div class="nav-dropdown">
-      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Sites partenaires <span class="nav-caret">▾</span></button>
+      <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Partner sites <span class="nav-caret">▾</span></button>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Studio Limoges <span style="opacity:.5">↗</span></a>
-        <a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Vanteaux Limoges <span style="opacity:.5">↗</span></a>
-        <a href="https://www.emagine-residence.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Emagine Résidence <span style="opacity:.5">↗</span></a>
-        <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Résidence Étudiante Limoges <span style="opacity:.5">↗</span></a>
+        <a href="https://www.studio-limoges.fr/en" target="_blank" rel="noopener noreferrer" role="menuitem">Studio Limoges <span style="opacity:.5">↗</span></a>
+        <a href="https://www.vanteaux-limoges.fr/en" target="_blank" rel="noopener noreferrer" role="menuitem">Vanteaux Limoges <span style="opacity:.5">↗</span></a>
+        <a href="https://www.emagine-residence.fr/en" target="_blank" rel="noopener noreferrer" role="menuitem">Emagine Résidence <span style="opacity:.5">↗</span></a>
+        <a href="https://www.residenceetudiantelimoges.fr/en" target="_blank" rel="noopener noreferrer" role="menuitem">Student Residence Limoges <span style="opacity:.5">↗</span></a>
         <a href="https://www.university-dutreix.fr" target="_blank" rel="noopener noreferrer" role="menuitem">University Dutreix <span style="opacity:.5">↗</span></a>
         <a href="https://www.university-meissonier.fr" target="_blank" rel="noopener noreferrer" role="menuitem">University Meissonier <span style="opacity:.5">↗</span></a>
-        <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Begip — Agence <span style="opacity:.5">↗</span></a>
+        <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" role="menuitem">Begip — Agency <span style="opacity:.5">↗</span></a>
       </div>
     </div>
-    <span class="lang-switch"><a href="/" class="active">FR</a><span class="sep">/</span><a href="/en">EN</a></span>
-    <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
-    <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span class="lang-switch"><a href="/">FR</a><span class="sep">/</span><a href="/en" class="active">EN</a></span>
+    <a href="#contact" class="nav-link nav-cta">Contact us</a>
+    <button class="nav-hamburger" aria-label="Open the menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -1250,61 +1212,56 @@
 
 <!-- ═══════════════════ MENU MOBILE ═══════════════════ -->
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu de navigation">
-  <a href="#types" class="mobile-menu-link">Voir les logements</a>
-  <a href="quartiers-loger-limoges" class="mobile-menu-link">Quartiers de Limoges</a>
-  <a href="investir-immobilier-limoges" class="mobile-menu-link">Investir à Limoges</a>
-  <a href="aides-logement-limoges" class="mobile-menu-link">Aides au logement</a>
-  <a href="louer-son-bien-limoges" class="mobile-menu-link">Propriétaires — louer son bien</a>
-  <div class="mobile-menu-divider">Découvrir</div>
-  <a href="vivre-a-limoges" class="mobile-menu-link">Vivre à Limoges</a>
-  <a href="haute-vienne-campagne-nature" class="mobile-menu-link">Haute-Vienne — Nature & vie</a>
-  <div class="mobile-menu-divider">Sites partenaires</div>
-  <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Studio Limoges ↗</a>
-  <a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Vanteaux Limoges ↗</a>
-  <a href="https://www.emagine-residence.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Emagine Résidence ↗</a>
-  <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Résidence Étudiante ↗</a>
+  <a href="#types" class="mobile-menu-link">See the homes</a>
+  <a href="/en/quartiers-loger-limoges" class="mobile-menu-link">Limoges districts</a>
+  <a href="/en/investir-immobilier-limoges" class="mobile-menu-link">Investing in Limoges</a>
+  <a href="/en/aides-logement-limoges" class="mobile-menu-link">Housing benefit</a>
+  <a href="/en/louer-son-bien-limoges" class="mobile-menu-link">Landlords — let your property</a>
+  <div class="mobile-menu-divider">Discover</div>
+  <a href="/en/vivre-a-limoges" class="mobile-menu-link">Living in Limoges</a>
+  <a href="/en/haute-vienne-campagne-nature" class="mobile-menu-link">Haute-Vienne — Nature & life</a>
+  <div class="mobile-menu-divider">Partner sites</div>
+  <a href="https://www.studio-limoges.fr/en" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Studio Limoges ↗</a>
+  <a href="https://www.vanteaux-limoges.fr/en" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Vanteaux Limoges ↗</a>
+  <a href="https://www.emagine-residence.fr/en" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Emagine Résidence ↗</a>
+  <a href="https://www.residenceetudiantelimoges.fr/en" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Student Residence ↗</a>
   <a href="https://www.university-dutreix.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">University Dutreix ↗</a>
   <a href="https://www.university-meissonier.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">University Meissonier ↗</a>
-  <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Begip — Agence ↗</a>
-  <a href="#contact" class="mobile-menu-cta">Nous contacter</a>
+  <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Begip — Agency ↗</a>
+  <a href="#contact" class="mobile-menu-cta">Contact us</a>
 </div>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero">
-  <div class="hero-announce"><span class="dot"></span>Au <span class="ann-date"></span> — <span class="ann-msg">Quelques appartements encore disponibles — T2, T3 et un T4</span></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Begip · Limoges depuis + de 35 ans</div>
-      <h1>Appartements &amp; maisons à louer à <em>Limoges</em></h1>
-      <p class="hero-desc">Begip, agence locale depuis plus de 35 ans, loue et gère en direct des appartements et des maisons à Limoges et dans son agglomération. Nous vous accompagnons pour trouver, simplement, le logement adapté à votre vie — jeune actif, couple, famille ou nouvel arrivant à Limoges.</p>
+      <div class="hero-tag">Begip · in Limoges for 35+ years</div>
+      <h1>Flats &amp; houses to rent in <em>Limoges</em></h1>
+      <p class="hero-desc">Begip, a local agency for over 35 years, directly rents and manages flats and houses in Limoges and its area. We help you find — simply — the home that fits your life: young professional, couple, family or newcomer to Limoges.</p>
       <div class="hero-actions">
-        <a href="#types" class="btn-primary">Voir les logements</a>
-        <a href="#contact" class="btn-ghost">Nous écrire</a>
+        <a href="#types" class="btn-primary">See the homes</a>
+        <a href="#contact" class="btn-ghost">Write to us</a>
       </div>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-title">Que cherchez-vous ?</div>
+      <div class="hero-card-title">What are you looking for?</div>
       <div class="type-grid">
-        <a href="location-t2-limoges" class="type-card">
+        <a href="/en/location-t2-limoges" class="type-card">
           <span class="type-name">T2</span>
-          <span class="type-sub">2 pièces · couples, jeunes actifs</span>
-          <span class="type-dispo" data-type="t2"></span>
+          <span class="type-sub">1 bedroom · couples, young professionals</span>
         </a>
-        <a href="location-t3-limoges" class="type-card">
+        <a href="/en/location-t3-limoges" class="type-card">
           <span class="type-name">T3</span>
-          <span class="type-sub">3 pièces · petites familles</span>
-          <span class="type-dispo" data-type="t3"></span>
-        </a>
-        <a href="t4-mauvendiere-limoges" class="type-card">
-          <span class="type-name">T4 et +</span>
-          <span class="type-sub">Grands appartements</span>
-          <span class="type-dispo" data-type="t4"></span>
+          <span class="type-sub">2 bedrooms · small families</span>
         </a>
         <a href="#types" class="type-card">
-          <span class="type-name">Maisons</span>
-          <span class="type-sub">Limoges & alentours</span>
-          <span class="type-dispo" data-type="maison"></span>
+          <span class="type-name">T4 and up</span>
+          <span class="type-sub">Large flats</span>
+        </a>
+        <a href="#types" class="type-card">
+          <span class="type-name">Houses</span>
+          <span class="type-sub">Limoges & around</span>
         </a>
       </div>
     </div>
@@ -1314,79 +1271,79 @@
 <!-- ═══════════════════ TYPES DE LOGEMENT ═══════════════════ -->
 <section class="types-section" id="types">
   <div class="section-inner">
-    <div class="section-tag">Nos logements</div>
-    <h2>Trouvez le bien <em>qui vous ressemble</em></h2>
-    <p class="section-sub">De l'appartement T2 lumineux pour deux à la maison familiale, Begip gère un parc varié à Limoges et dans la Haute-Vienne. Chaque bien est sélectionné, vérifié, et accompagné par notre équipe locale.</p>
+    <div class="section-tag">Our homes</div>
+    <h2>Find the home <em>that suits you</em></h2>
+    <p class="section-sub">From a bright T2 flat for two to a family house, Begip manages a varied portfolio in Limoges and the Haute-Vienne. Every property is selected, checked and supported by our local team.</p>
 
     <div style="display:flex;gap:18px;flex-wrap:wrap;margin:0 0 52px;">
-      <a href="location-appartement-limoges" style="flex:1;min-width:280px;display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,var(--sage-deep),var(--sage));color:var(--stone-soft);padding:26px 30px;border-radius:10px;text-decoration:none;">
+      <a href="/en/location-appartement-limoges" style="flex:1;min-width:280px;display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,var(--sage-deep),var(--sage));color:var(--stone-soft);padding:26px 30px;border-radius:10px;text-decoration:none;">
         <span style="font-size:2rem;line-height:1;">🏢</span>
         <span>
-          <span style="display:block;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;">Louer un appartement</span>
-          <span style="display:block;font-size:.85rem;color:var(--ocre-light);margin-top:3px;">Studios, T2, T3, T4 · tous les quartiers →</span>
+          <span style="display:block;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;">Rent a flat</span>
+          <span style="display:block;font-size:.85rem;color:var(--ocre-light);margin-top:3px;">Studios, T2, T3, T4 · every district →</span>
         </span>
       </a>
-      <a href="location-maison-limoges" style="flex:1;min-width:280px;display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,var(--ocre-deep),var(--ocre));color:#fff;padding:26px 30px;border-radius:10px;text-decoration:none;">
+      <a href="/en/location-maison-limoges" style="flex:1;min-width:280px;display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,var(--ocre-deep),var(--ocre));color:#fff;padding:26px 30px;border-radius:10px;text-decoration:none;">
         <span style="font-size:2rem;line-height:1;">🏠</span>
         <span>
-          <span style="display:block;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;">Louer une maison</span>
-          <span style="display:block;font-size:.85rem;color:rgba(255,255,255,.85);margin-top:3px;">Maisons de ville &amp; pavillons · Limoges &amp; Haute-Vienne →</span>
+          <span style="display:block;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;">Rent a house</span>
+          <span style="display:block;font-size:.85rem;color:rgba(255,255,255,.85);margin-top:3px;">Town houses &amp; detached homes · Limoges &amp; Haute-Vienne →</span>
         </span>
       </a>
     </div>
 
     <div class="types-grid">
       <!-- T2 -->
-      <a href="location-t2-limoges" class="logement-card">
+      <a href="/en/location-t2-limoges" class="logement-card">
         <div class="logement-header">
           <div class="logement-num">N° 01</div>
-          <h3 class="logement-name">Appartement T2</h3>
-          <div class="logement-tagline">2 pièces · 35 à 55 m²</div>
+          <h3 class="logement-name">T2 flat (1 bedroom)</h3>
+          <div class="logement-tagline">2 rooms · 35 to 55 m²</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">L'option idéale pour un couple, un jeune actif ou une mobilité professionnelle. Cuisine équipée, espace nuit séparé, dans des immeubles bien situés près des commerces et transports.</p>
+          <p class="logement-desc">The ideal option for a couple, a young professional or a work relocation. Fitted kitchen, separate sleeping area, in well-located buildings near shops and transport.</p>
           <ul class="logement-features">
-            <li>Centre-ville et quartiers résidentiels</li>
-            <li>Vide ou meublé selon les biens</li>
-            <li>Cave ou parking selon les immeubles</li>
+            <li>City centre and residential districts</li>
+            <li>Unfurnished or furnished depending on the property</li>
+            <li>Cellar or parking depending on the building</li>
           </ul>
-          <span class="logement-link">Voir les T2 disponibles →</span>
+          <span class="logement-link">See available T2 flats →</span>
         </div>
       </a>
 
       <!-- T3 -->
-      <a href="location-t3-limoges" class="logement-card">
+      <a href="/en/location-t3-limoges" class="logement-card">
         <div class="logement-header">
           <div class="logement-num">N° 02</div>
-          <h3 class="logement-name">Appartement T3</h3>
-          <div class="logement-tagline">3 pièces · 55 à 75 m²</div>
+          <h3 class="logement-name">T3 flat (2 bedrooms)</h3>
+          <div class="logement-tagline">3 rooms · 55 to 75 m²</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Le format polyvalent : couple avec enfant, colocation entre amis, espace de télétravail. Deux chambres, un séjour spacieux, dans des immeubles avec ascenseur ou des résidences avec extérieur.</p>
+          <p class="logement-desc">The versatile format: a couple with a child, a flatshare between friends, a home-office space. Two bedrooms, a spacious living room, in buildings with a lift or residences with outdoor space.</p>
           <ul class="logement-features">
-            <li>Petites familles ou couples établis</li>
-            <li>Possibilité balcon, terrasse ou jardin</li>
-            <li>Stationnement souvent inclus</li>
+            <li>Small families or settled couples</li>
+            <li>Possible balcony, terrace or garden</li>
+            <li>Parking often included</li>
           </ul>
-          <span class="logement-link">Voir les T3 disponibles →</span>
+          <span class="logement-link">See available T3 flats →</span>
         </div>
       </a>
 
-      <!-- T4 — annonce disponible (rue de la Mauvendière) -->
-      <a href="t4-mauvendiere-limoges" class="logement-card">
+      <!-- T4 et + -->
+      <a href="#contact" class="logement-card">
         <div class="logement-header">
-          <div class="logement-num">Disponible de suite</div>
-          <h3 class="logement-name">T4 — rue de la Mauvendière</h3>
-          <div class="logement-tagline">92,80 m² · 3 chambres-suites · 993 €/mois CC</div>
+          <div class="logement-num">N° 03</div>
+          <h3 class="logement-name">T4 and up</h3>
+          <div class="logement-tagline">4 rooms and up · 75 m² and over</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Notre T4 actuellement disponible : entièrement rénové, avec <strong>3 chambres disposant chacune de sa salle d'eau et de son WC privatifs</strong> — une configuration rare, idéale pour une colocation ou une famille. Cuisine aménagée, balcon, fibre.</p>
+          <p class="logement-desc">Large flats for established families. Three or more bedrooms, a family living room, a second bathroom in some properties. Often in prestige city-centre buildings or residential districts.</p>
           <ul class="logement-features">
-            <li>3 salles d'eau privatives</li>
-            <li>Balcon, parquet, très lumineux</li>
-            <li>Disponible immédiatement</li>
+            <li>Familles avec enfants</li>
+            <li>Quiet, well-connected districts</li>
+            <li>Cellars and parking included</li>
           </ul>
-          <span class="logement-link">Voir l'annonce →</span>
+          <span class="logement-link">See T4 flats and up →</span>
         </div>
       </a>
 
@@ -1394,53 +1351,53 @@
       <a href="#contact" class="logement-card">
         <div class="logement-header">
           <div class="logement-num">N° 04</div>
-          <h3 class="logement-name">Maisons à Limoges</h3>
-          <div class="logement-tagline">Avec jardin, garage, dépendances</div>
+          <h3 class="logement-name">Houses in Limoges</h3>
+          <div class="logement-tagline">With garden, garage, outbuildings</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Pour ceux qui cherchent un vrai chez-soi avec jardin et garage à Limoges. Maisons individuelles ou mitoyennes, dans des quartiers résidentiels calmes.</p>
+          <p class="logement-desc">For those looking for a real home with a garden and garage in Limoges. Detached or semi-detached houses in quiet residential districts.</p>
           <ul class="logement-features">
             <li>Familles avec enfants</li>
-            <li>Jardin et stationnement privatif</li>
-            <li>Quartiers résidentiels de Limoges</li>
+            <li>Private garden and parking</li>
+            <li>Residential districts of Limoges</li>
           </ul>
-          <span class="logement-link">Voir les maisons →</span>
+          <span class="logement-link">See the houses →</span>
         </div>
       </a>
 
       <!-- Maisons hors Limoges -->
-      <a href="quartiers-loger-limoges" class="logement-card">
+      <a href="/en/quartiers-loger-limoges" class="logement-card">
         <div class="logement-header">
           <div class="logement-num">N° 05</div>
-          <h3 class="logement-name">Logements en Haute-Vienne</h3>
+          <h3 class="logement-name">Homes in the Haute-Vienne</h3>
           <div class="logement-tagline">Nantiat · Bellac · Compreignac · Chamboret · Chaptelat</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Begip gère des appartements et des maisons dans 5 communes de la Haute-Vienne : Nantiat, Bellac, Compreignac, Chamboret et Chaptelat. Cadre rural et semi-rural, à moins d'une heure de Limoges.</p>
+          <p class="logement-desc">Begip manages flats and houses in 5 towns of the Haute-Vienne: Nantiat, Bellac, Compreignac, Chamboret and Chaptelat. A rural and semi-rural setting, less than an hour from Limoges.</p>
           <ul class="logement-features">
-            <li>5 communes en Haute-Vienne (87)</li>
-            <li>Appartements et maisons disponibles</li>
-            <li>Idéal famille, télétravail, résidence principale</li>
+            <li>5 towns in the Haute-Vienne (87)</li>
+            <li>Flats and houses available</li>
+            <li>Ideal for families, remote working, a main home</li>
           </ul>
-          <span class="logement-link">Découvrir →</span>
+          <span class="logement-link">Discover →</span>
         </div>
       </a>
 
       <!-- Card spéciale : renvoi vers studio-limoges.fr -->
-      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="logement-card external">
+      <a href="https://www.studio-limoges.fr/en" target="_blank" rel="noopener noreferrer" class="logement-card external">
         <div class="logement-header">
-          <div class="logement-num">Site spécialisé ↗</div>
+          <div class="logement-num">Specialist site ↗</div>
           <h3 class="logement-name">Studios & T1</h3>
-          <div class="logement-tagline">Voir studio-limoges.fr</div>
+          <div class="logement-tagline">See studio-limoges.fr</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Vous cherchez un studio ou un T1 à Limoges ? Begip dispose d'un site dédié pour cette typologie : <strong>studio-limoges.fr</strong>. Vous y trouverez l'ensemble de l'offre studio et T1 ainsi que les conditions adaptées.</p>
+          <p class="logement-desc">Looking for a studio or a one-room (T1) flat in Limoges? Begip has a dedicated site for this type: <strong>studio-limoges.fr</strong>. You'll find the full studio and T1 offer there, with suitable terms.</p>
           <ul class="logement-features">
-            <li>Studios meublés ou vides</li>
-            <li>T1 dans tout Limoges</li>
-            <li>Site spécialisé Begip</li>
+            <li>Furnished or unfurnished studios</li>
+            <li>T1 flats across Limoges</li>
+            <li>Specialist Begip site</li>
           </ul>
-          <span class="logement-link">Aller sur studio-limoges.fr ↗</span>
+          <span class="logement-link">Go to studio-limoges.fr ↗</span>
         </div>
       </a>
     </div>
@@ -1450,65 +1407,65 @@
 <!-- ═══════════════════ QUARTIERS & SECTEURS ═══════════════════ -->
 <section class="quartiers-section" id="quartiers">
   <div class="section-inner">
-    <div class="section-tag">Quartiers & secteurs</div>
-    <h2>Limoges et son <em>agglomération</em></h2>
-    <p class="section-sub">Begip gère des biens dans plusieurs quartiers de Limoges intra-muros, et dans 5 communes de la Haute-Vienne : Nantiat, Compreignac, Chamboret, Bellac et Chaptelat. Découvrez les zones où nous sommes implantés.</p>
+    <div class="section-tag">Districts & areas</div>
+    <h2>Limoges and its <em>surrounding area</em></h2>
+    <p class="section-sub">Begip manages properties in several districts of central Limoges, and in 5 towns of the Haute-Vienne: Nantiat, Compreignac, Chamboret, Bellac and Chaptelat. Discover the areas where we operate.</p>
 
     <div class="quartiers-grid">
 
       <!-- Centre-ville Limoges -->
-      <a href="quartiers-loger-limoges" class="quartier-card">
+      <a href="/en/quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">01</div>
-        <h3 class="quartier-name">Centre-ville de Limoges</h3>
+        <h3 class="quartier-name">Limoges city centre</h3>
         <div class="quartier-zone">Hyper-centre · Bénédictins · Halles</div>
-        <p class="quartier-desc">Le cœur historique de Limoges : commerces à pied, gare des Bénédictins, vie culturelle. Begip gère plusieurs immeubles d'habitation dans ce secteur.</p>
+        <p class="quartier-desc">The historic heart of Limoges: shops on foot, Bénédictins station, cultural life. Begip manages several residential buildings in this area.</p>
         <div class="quartier-stats">
-          <span><strong>Disponibilités</strong> régulières</span>
+          <span><strong>Regular</strong> availability</span>
         </div>
       </a>
 
       <!-- Quartier 2 — Vanteaux -->
-      <a href="quartiers-loger-limoges.html#vanteaux" class="quartier-card">
+      <a href="/en/quartiers-loger-limoges#vanteaux" class="quartier-card">
         <div class="quartier-num">02</div>
-        <h3 class="quartier-name">Quartier des Vanteaux</h3>
-        <div class="quartier-zone">Proche FLSH · IUT · Bords de Vienne</div>
-        <p class="quartier-desc">Quartier résidentiel calme, apprécié des étudiants et des actifs. Proche des facultés de lettres et de médecine, des bords de la Vienne et des commerces de proximité.</p>
+        <h3 class="quartier-name">The Vanteaux district</h3>
+        <div class="quartier-zone">Near the FLSH · IUT · Banks of the Vienne</div>
+        <p class="quartier-desc">A quiet residential district, popular with students and professionals. Near the arts and medical faculties, the banks of the Vienne and local shops.</p>
         <div class="quartier-stats">
-          <span><strong>Disponibilités</strong> régulières</span>
+          <span><strong>Regular</strong> availability</span>
         </div>
       </a>
 
       <!-- Quartier 3 — Gare / Bénédictins -->
-      <a href="quartiers-loger-limoges" class="quartier-card">
+      <a href="/en/quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">03</div>
-        <h3 class="quartier-name">Secteur Gare / Bénédictins</h3>
-        <div class="quartier-zone">Centre · Gare TGV · Champ de Juillet</div>
-        <p class="quartier-desc">À deux pas de la gare des Bénédictins et du Champ de Juillet. Idéal pour les actifs en mobilité ou en télétravail. Commerces, transports et services à pied.</p>
+        <h3 class="quartier-name">Station / Bénédictins area</h3>
+        <div class="quartier-zone">Centre · High-speed station · Champ de Juillet</div>
+        <p class="quartier-desc">A stone's throw from Bénédictins station and the Champ de Juillet park. Ideal for professionals who travel or work from home. Shops, transport and services on foot.</p>
         <div class="quartier-stats">
-          <span><strong>Disponibilités</strong> régulières</span>
+          <span><strong>Regular</strong> availability</span>
         </div>
       </a>
 
       <!-- Secteur nord — Nantiat / Compreignac / Chamboret -->
-      <a href="quartiers-loger-limoges" class="quartier-card">
+      <a href="/en/quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">04</div>
-        <h3 class="quartier-name">Secteur nord — Nantiat</h3>
+        <h3 class="quartier-name">Northern area — Nantiat</h3>
         <div class="quartier-zone">Nantiat · Compreignac · Chamboret</div>
-        <p class="quartier-desc">Appartements et maisons en gestion à Nantiat, Compreignac et Chamboret, au nord de Limoges. Cadre rural calme, idéal pour les familles ou actifs cherchant de l'espace à moins de 30 km de la ville.</p>
+        <p class="quartier-desc">Flats and houses managed in Nantiat, Compreignac and Chamboret, north of Limoges. A quiet rural setting, ideal for families or professionals wanting space less than 30 km from the city.</p>
         <div class="quartier-stats">
-          <span><strong>3</strong> communes</span>
+          <span><strong>3</strong> towns</span>
           <span><strong>87</strong> Haute-Vienne</span>
         </div>
       </a>
 
       <!-- Haute-Vienne — Bellac / Chaptelat -->
-      <a href="quartiers-loger-limoges" class="quartier-card">
+      <a href="/en/quartiers-loger-limoges" class="quartier-card">
         <div class="quartier-num">05</div>
-        <h3 class="quartier-name">Secteur Bellac / Chaptelat</h3>
+        <h3 class="quartier-name">Bellac / Chaptelat area</h3>
         <div class="quartier-zone">Bellac · Chaptelat · Haute-Vienne</div>
-        <p class="quartier-desc">Appartements et maisons à louer à Bellac et dans le secteur du Chaptelat. Logements gérés directement par Begip, pour ceux qui recherchent la tranquillité de la campagne limousine.</p>
+        <p class="quartier-desc">Flats and houses to rent in Bellac and the Chaptelat area. Homes managed directly by Begip, for those seeking the peace of the Limousin countryside.</p>
         <div class="quartier-stats">
-          <span><strong>2</strong> communes</span>
+          <span><strong>2</strong> towns</span>
           <span><strong>87</strong> Haute-Vienne</span>
         </div>
       </a>
@@ -1516,11 +1473,11 @@
       <!-- Bientôt d'autres -->
       <a href="#contact" class="quartier-card placeholder">
         <div class="quartier-num">+</div>
-        <h3 class="quartier-name">D'autres biens régulièrement</h3>
-        <div class="quartier-zone">Nouveaux mandats à Limoges</div>
-        <p class="quartier-desc">Begip rentre régulièrement de nouveaux biens en gestion à Limoges. Contactez-nous pour les disponibilités du moment, avant qu'ils ne soient publiés.</p>
+        <h3 class="quartier-name">New properties regularly</h3>
+        <div class="quartier-zone">New listings in Limoges</div>
+        <p class="quartier-desc">Begip regularly takes on new properties to manage in Limoges. Contact us for current availability, before they're published.</p>
         <div class="quartier-stats">
-          <span><strong>Nous</strong> contacter</span>
+          <span><strong>Contact</strong> us</span>
         </div>
       </a>
 
@@ -1531,24 +1488,24 @@
 <!-- ═══════════════════ MARCHÉ LOCATIF ═══════════════════ -->
 <section class="marche-section">
   <div class="section-inner">
-    <div class="section-tag">Le marché en 2026</div>
-    <h2>Se loger à Limoges <em>aujourd'hui</em></h2>
-    <p class="section-sub">Un aperçu du marché locatif limougeaud pour situer votre recherche — et comprendre pourquoi une agence locale fait la différence.</p>
+    <div class="section-tag">The market in 2026</div>
+    <h2>Renting in Limoges <em>today</em></h2>
+    <p class="section-sub">A snapshot of the Limoges rental market to frame your search — and why a local agency makes the difference.</p>
     <div class="marche-grid">
       <div class="marche-card">
         <span class="marche-icon">🔑</span>
-        <div class="marche-title">Des loyers accessibles</div>
-        <p class="marche-desc">Limoges figure parmi les villes françaises où se loger coûte le moins cher. Un <strong>T2 s'y loue nettement en dessous</strong> des tarifs des grandes métropoles, à confort équivalent.</p>
+        <div class="marche-title">Affordable rents</div>
+        <p class="marche-desc">Limoges is among the cheapest French cities to rent in. A <strong>T2 flat rents well below</strong> big-city prices, for the same comfort.</p>
       </div>
       <div class="marche-card">
         <span class="marche-icon">📈</span>
-        <div class="marche-title">Une demande qui monte à la rentrée</div>
-        <p class="marche-desc">Étudiants, personnels du CHU, jeunes actifs et nouveaux arrivants : la tension locative <strong>grimpe de juin à septembre</strong>. Chercher tôt, c'est avoir le choix.</p>
+        <div class="marche-title">Demand that rises at the start of term</div>
+        <p class="marche-desc">Students, hospital staff, young professionals and newcomers: rental demand <strong>climbs from June to September</strong>. Searching early means having the pick.</p>
       </div>
       <div class="marche-card">
         <span class="marche-icon">🗺️</span>
-        <div class="marche-title">Du centre-ville à la campagne</div>
-        <p class="marche-desc">Du T2 en hyper-centre à la maison avec jardin en Haute-Vienne, l'offre est <strong>variée</strong> — à condition de connaître le terrain. C'est le métier de Begip depuis plus de 35 ans.</p>
+        <div class="marche-title">From the city centre to the countryside</div>
+        <p class="marche-desc">From a central T2 to a house with a garden in the Haute-Vienne, the offer is <strong>varied</strong> — provided you know the ground. That's been Begip's job for over 35 years.</p>
       </div>
     </div>
   </div>
@@ -1557,92 +1514,92 @@
 <!-- ═══════════════════ PROMESSE BEGIP ═══════════════════ -->
 <section class="promesse-section">
   <div class="section-inner">
-    <div class="section-tag">Notre promesse</div>
-    <h2>Une agence locale,<br /><em>présente et engagée</em></h2>
-    <p class="section-sub">Plus de trente-cinq ans de présence à Limoges, ça crée des habitudes : être joignable, agir vite, connaître chaque immeuble géré comme le sien — et faire évoluer nos méthodes au rythme des outils modernes.</p>
+    <div class="section-tag">Our promise</div>
+    <h2>A local agency,<br /><em>present and committed</em></h2>
+    <p class="section-sub">Over thirty-five years in Limoges builds habits: being reachable, acting fast, knowing every managed building as if it were our own — and updating our methods with modern tools.</p>
 
     <div class="valeurs-grid">
       <div class="valeur-item">
         <div class="valeur-num">I</div>
         <div class="valeur-content">
-          <h3>Une équipe à Limoges</h3>
-          <p>Pas de plateforme délocalisée, pas de centre d'appel. Une vraie agence avenue Georges Dumas, joignable et présente toute la semaine.</p>
+          <h3>A team in Limoges</h3>
+          <p>No offshore platform, no call centre. A real agency on Avenue Georges Dumas, reachable and present all week.</p>
         </div>
       </div>
       <div class="valeur-item">
         <div class="valeur-num">II</div>
         <div class="valeur-content">
-          <h3>Home Service &amp; artisans partenaires</h3>
-          <p>Begip s'appuie sur la société <strong>Home Service</strong> (multiservices) et un réseau d'artisans locaux en partenariat de longue date pour toutes les interventions, urgentes ou non. L'objectif : que vous profitiez pleinement de votre logement, dans les meilleures conditions.</p>
+          <h3>Home Service &amp; partner tradespeople</h3>
+          <p>Begip relies on <strong>Home Service</strong> (multi-services) and a long-standing network of local tradespeople for all work, urgent or not. The goal: that you enjoy your home fully, in the best conditions.</p>
         </div>
       </div>
       <div class="valeur-item">
         <div class="valeur-num">III</div>
         <div class="valeur-content">
-          <h3>États des lieux détaillés, photos à l'appui</h3>
-          <p>Begip réalise vos états des lieux d'entrée et de sortie avec rigueur, photos à l'appui — sur tablette avec signature électronique lorsque c'est possible. Le compte-rendu complet vous est ensuite transmis par e-mail dès notre retour à l'agence, généralement sous 24 à 48 h.</p>
+          <h3>Detailed inventories, backed by photos</h3>
+          <p>Begip carries out your check-in and check-out inventories carefully, backed by photos — on tablet with electronic signature where available. The full report is then sent to you by email once we are back at the agency, usually within 24 to 48 hours.</p>
         </div>
       </div>
       <div class="valeur-item">
         <div class="valeur-num">IV</div>
         <div class="valeur-content">
-          <h3>Accompagnement administratif</h3>
-          <p>Aides au logement (APL/ALS), Visale, garant moral, Mobili-Jeune pour les alternants : nous vous orientons sur les dispositifs adaptés à votre situation.</p>
+          <h3>Administrative support</h3>
+          <p>Housing benefit (APL/ALS), Visale, a moral guarantor, Mobili-Jeune for apprentices: we guide you to the schemes suited to your situation.</p>
         </div>
       </div>
       <div class="valeur-item">
         <div class="valeur-num">V</div>
         <div class="valeur-content">
-          <h3>Transparence totale</h3>
-          <p>Dossier clair, conditions précisées dès la prise de contact, pas de frais cachés. Vous savez ce que vous signez, et ce qui vous attend.</p>
+          <h3>Full transparency</h3>
+          <p>A clear application, terms set out from first contact, no hidden fees. You know what you're signing and what to expect.</p>
         </div>
       </div>
       <div class="valeur-item">
         <div class="valeur-num">VI</div>
         <div class="valeur-content">
-          <h3>plus de 35 ans d'ancrage local</h3>
-          <p>Begip connaît Limoges, ses immeubles, ses quartiers, ses interlocuteurs. Cette expérience profite directement à nos locataires : conseil pertinent, réactivité, fiabilité.</p>
+          <h3>over 35 years of local roots</h3>
+          <p>Begip knows Limoges, its buildings, its districts, its people. That experience benefits our tenants directly: relevant advice, responsiveness, reliability.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ PROPRIÉTAIRES ═══════════════════ -->
-<section class="proprio-section" aria-label="Propriétaires : confier son bien à Begip" style="background:linear-gradient(160deg,var(--sage-deep) 0%,var(--sage) 100%);color:var(--stone-soft);padding:clamp(64px,8vw,96px) clamp(20px,5vw,56px);">
+<!-- ═══════════════════ LANDLORDS ═══════════════════ -->
+<section class="proprio-section" aria-label="Landlords: entrust your property to Begip" style="background:linear-gradient(160deg,var(--sage-deep) 0%,var(--sage) 100%);color:var(--stone-soft);padding:clamp(64px,8vw,96px) clamp(20px,5vw,56px);">
   <div class="section-inner" style="max-width:1120px;margin:0 auto;">
-    <div class="section-tag" style="color:var(--ocre-light);">Propriétaires &amp; bailleurs</div>
-    <h2 style="color:#fff;">Un logement à louer à Limoges ?<br /><em style="color:var(--ocre-light);font-style:normal;">Confiez-le à Begip.</em></h2>
+    <div class="section-tag" style="color:var(--ocre-light);">Landlords &amp; owners</div>
+    <h2 style="color:#fff;">A property to let in Limoges?<br /><em style="color:var(--ocre-light);font-style:normal;">Entrust it to Begip.</em></h2>
     <p class="section-sub" style="color:rgba(250,246,238,.82);max-width:740px;">
-      Mon-Logement-Limoges, c'est le site où des étudiants et des actifs cherchent un logement à Limoges chaque semaine. Résultat : votre bien est vu par les bons candidats et se loue vite. Nous nous occupons de tout — de la recherche du locataire à la gestion complète, selon la formule que vous choisissez.
+      Mon-Logement-Limoges is the site where students and working professionals look for a home in Limoges every week. The result: your property is seen by the right applicants and lets quickly. We handle everything — from finding the tenant to full management, depending on the option you choose.
     </p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin:42px 0;">
       <div style="background:rgba(255,255,255,.06);border:1px solid rgba(224,191,143,.25);border-radius:14px;padding:26px;">
         <div style="font-size:1.7rem;margin-bottom:12px;" aria-hidden="true">🎯</div>
-        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Une demande locative réelle</h3>
-        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Notre réseau de sites attire chaque semaine des locataires en recherche à Limoges. Moins de vacance : votre bien se loue plus vite, aux bons candidats.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Real rental demand</h3>
+        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Our network of sites attracts tenants searching in Limoges every week. Less vacancy: your property lets faster, to the right applicants.</p>
       </div>
       <div style="background:rgba(255,255,255,.06);border:1px solid rgba(224,191,143,.25);border-radius:14px;padding:26px;">
         <div style="font-size:1.7rem;margin-bottom:12px;" aria-hidden="true">🔎</div>
-        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Des dossiers sélectionnés</h3>
-        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Solvabilité vérifiée, garanties (Visale, garant), pièces contrôlées. On vous présente des locataires fiables — pas le premier venu.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Screened applications</h3>
+        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Verified solvency, guarantees (Visale, guarantor), checked documents. We present reliable tenants — not just the first to apply.</p>
       </div>
       <div style="background:rgba(255,255,255,.06);border:1px solid rgba(224,191,143,.25);border-radius:14px;padding:26px;">
         <div style="font-size:1.7rem;margin-bottom:12px;" aria-hidden="true">🗂️</div>
-        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Gestion complète ou mise en location seule</h3>
-        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">À vous de choisir : mandat de gestion (loyers, quittances, entretien, états des lieux) ou simple recherche de locataire. On s'adapte à vos besoins.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Full management or letting only</h3>
+        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Your choice: a management mandate (rent, receipts, maintenance, inventories) or simply finding a tenant. We adapt to your needs.</p>
       </div>
       <div style="background:rgba(255,255,255,.06);border:1px solid rgba(224,191,143,.25);border-radius:14px;padding:26px;">
         <div style="font-size:1.7rem;margin-bottom:12px;" aria-hidden="true">🤝</div>
-        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Agence locale, honoraires clairs</h3>
-        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Plus de 35 ans à Limoges, une équipe avenue Georges Dumas, des conditions transparentes. Un interlocuteur dédié, pas une plateforme délocalisée.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Local agency, clear fees</h3>
+        <p style="color:rgba(250,246,238,.75);font-size:.92rem;line-height:1.6;">Over 35 years in Limoges, a team on Avenue Georges Dumas, transparent terms. A dedicated contact, not an off-site platform.</p>
       </div>
     </div>
 
     <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
-      <a href="louer-son-bien-limoges" class="btn-primary">Confier mon bien à Begip →</a>
-      <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" style="color:var(--ocre-light);font-weight:600;text-decoration:none;">Voir tous les services de gestion sur begip.fr →</a>
+      <a href="/en/louer-son-bien-limoges" class="btn-primary">Entrust my property to Begip →</a>
+      <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" style="color:var(--ocre-light);font-weight:600;text-decoration:none;">See all management services on begip.fr →</a>
     </div>
   </div>
 </section>
@@ -1650,58 +1607,58 @@
 <!-- ═══════════════════ RÉSEAU BEGIP ═══════════════════ -->
 <section class="reseau-section">
   <div class="section-inner">
-    <div class="section-tag">Le réseau Begip</div>
-    <h2>Tous nos sites <em>spécialisés</em></h2>
-    <p class="section-sub">Pour vous orienter rapidement vers le bon interlocuteur, Begip a structuré son offre en plusieurs sites thématiques. Chaque site est dédié à un public ou à une typologie particulière.</p>
+    <div class="section-tag">The Begip network</div>
+    <h2>All our <em>specialist</em> sites</h2>
+    <p class="section-sub">To point you quickly to the right contact, Begip has organised its offer into several themed sites. Each site is dedicated to a particular audience or property type.</p>
 
     <div class="reseau-grid">
 
-      <a href="/" class="reseau-card current">
+      <a href="/en" class="reseau-card current">
         <div class="reseau-name">Mon Logement Limoges</div>
         <div class="reseau-url">mon-logement-limoges.fr</div>
-        <div class="reseau-desc">Ce site — appartements et maisons à louer à Limoges et en Haute-Vienne</div>
+        <div class="reseau-desc">This site — flats and houses to rent in Limoges and the Haute-Vienne</div>
       </a>
 
-      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+      <a href="https://www.studio-limoges.fr/en" target="_blank" rel="noopener noreferrer" class="reseau-card">
         <div class="reseau-name">Studio Limoges</div>
         <div class="reseau-url">studio-limoges.fr</div>
-        <div class="reseau-desc">Studios et T1 vides ou meublés à Limoges</div>
+        <div class="reseau-desc">Studios and T1 flats, furnished or unfurnished, in Limoges</div>
       </a>
 
-      <a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+      <a href="https://www.vanteaux-limoges.fr/en" target="_blank" rel="noopener noreferrer" class="reseau-card">
         <div class="reseau-name">Vanteaux Limoges</div>
         <div class="reseau-url">vanteaux-limoges.fr</div>
-        <div class="reseau-desc">Logements étudiants dans le quartier des Vanteaux</div>
+        <div class="reseau-desc">Student housing in the Vanteaux district</div>
       </a>
 
-      <a href="https://www.emagine-residence.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
+      <a href="https://www.emagine-residence.fr/en" target="_blank" rel="noopener noreferrer" class="reseau-card">
         <div class="reseau-name">Emagine Résidence</div>
         <div class="reseau-url">emagine-residence.fr</div>
-        <div class="reseau-desc">Résidence étudiante à Isle — studios meublés près des campus</div>
+        <div class="reseau-desc">Student residence in Isle — furnished studios near the campuses</div>
       </a>
 
-      <a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
-        <div class="reseau-name">Résidence Étudiante</div>
+      <a href="https://www.residenceetudiantelimoges.fr/en" target="_blank" rel="noopener noreferrer" class="reseau-card">
+        <div class="reseau-name">Student Residence</div>
         <div class="reseau-url">residenceetudiantelimoges.fr</div>
-        <div class="reseau-desc">3 résidences étudiantes — 450+ logements à Limoges</div>
+        <div class="reseau-desc">3 student residences — 450+ homes in Limoges</div>
       </a>
 
       <a href="https://www.university-dutreix.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
         <div class="reseau-name">University Dutreix</div>
         <div class="reseau-url">university-dutreix.fr</div>
-        <div class="reseau-desc">Résidence universitaire rue Armand Dutreix — proche campus</div>
+        <div class="reseau-desc">University residence on Rue Armand Dutreix — near campus</div>
       </a>
 
       <a href="https://www.university-meissonier.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
         <div class="reseau-name">University Meissonier</div>
         <div class="reseau-url">university-meissonier.fr</div>
-        <div class="reseau-desc">Résidence universitaire rue Meissonier — studios étudiants</div>
+        <div class="reseau-desc">University residence on Rue Meissonier — student studios</div>
       </a>
 
       <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="reseau-card">
-        <div class="reseau-name">Begip — Agence</div>
+        <div class="reseau-name">Begip — Agency</div>
         <div class="reseau-url">begip.fr</div>
-        <div class="reseau-desc">Site officiel de l'agence — propriétaires et services</div>
+        <div class="reseau-desc">The agency's official site — landlords and services</div>
       </a>
 
     </div>
@@ -1711,34 +1668,34 @@
 <!-- ═══════════════════ FAQ ═══════════════════ -->
 <section class="faq-section" id="faq">
   <div class="section-inner">
-    <div class="section-tag">Questions fréquentes</div>
-    <h2>Louer avec Begip, <em>en clair</em></h2>
-    <p class="section-sub">Garant, frais, dossier, état des lieux : l'essentiel pour aborder sereinement votre location à Limoges.</p>
+    <div class="section-tag">FAQ</div>
+    <h2>Renting with Begip, <em>made clear</em></h2>
+    <p class="section-sub">Guarantor, fees, application, inventory: the essentials to approach your rental in Limoges with confidence.</p>
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Faut-il un garant pour louer un logement à Limoges ?<span class="faq-arrow">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Un garant est généralement demandé. Si vous n'en avez pas, la <strong>garantie Visale</strong> (gratuite, proposée par Action Logement) peut le remplacer, et d'autres solutions de caution sont étudiées au cas par cas. Begip vous oriente vers le dispositif adapté à votre situation.</div></div>
+        <button class="faq-q" aria-expanded="false">Do you need a guarantor to rent a home in Limoges?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">A guarantor is usually required. If you don't have one, the <strong>Visale guarantee</strong> (free, from Action Logement) can replace it, and other guarantee solutions are considered case by case. Begip guides you to the scheme suited to your situation.</div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Quels sont les frais d'agence chez Begip ?<span class="faq-arrow">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Les honoraires de location sont <strong>encadrés par la loi</strong> (plafonnés selon la surface du logement) et vous sont indiqués clairement dès la prise de contact. Pas de frais cachés : vous savez ce que vous signez.</div></div>
+        <button class="faq-q" aria-expanded="false">What are Begip's agency fees?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Rental fees are <strong>capped by law</strong> (based on the home's size) and are stated clearly from first contact. No hidden fees: you know what you're signing.</div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Les logements sont-ils meublés ou vides ?<span class="faq-arrow">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Les deux, selon les biens. Begip gère des appartements et des maisons <strong>vides comme meublés</strong> à Limoges et en Haute-Vienne. Précisez votre préférence, nous vous proposons ce qui correspond à votre recherche.</div></div>
+        <button class="faq-q" aria-expanded="false">Are the homes furnished or unfurnished?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Both, depending on the property. Begip manages flats and houses <strong>furnished and unfurnished</strong> in Limoges and the Haute-Vienne. Tell us your preference and we'll suggest what fits your search.</div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Comment se passe l'état des lieux ?<span class="faq-arrow">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Begip réalise vos états des lieux d'entrée et de sortie avec soin, <strong>photos à l'appui</strong> (sur tablette avec signature électronique lorsque c'est possible). Le compte-rendu complet vous est ensuite transmis par e-mail dès notre retour à l'agence, généralement sous 24 à 48 h.</div></div>
+        <button class="faq-q" aria-expanded="false">How does the inventory work?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Begip carries out your check-in and check-out inventories carefully, <strong>backed by photos</strong> (on tablet with electronic signature where available). The full report is then sent to you by email once we are back at the agency, usually within 24 to 48 hours.</div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Quels documents pour constituer mon dossier ?<span class="faq-arrow">▾</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Pièce d'identité, justificatif de domicile, contrat de travail (ou équivalent), 3 derniers bulletins de salaire (ou justificatif de ressources) et dernier avis d'imposition. Les mêmes pièces sont demandées pour le garant. Le RIB n'est demandé que si vous choisissez le paiement par prélèvement. Notre équipe vous accompagne dans le montage du dossier.</div></div>
+        <button class="faq-q" aria-expanded="false">What documents do I need for my application?<span class="faq-arrow">▾</span></button>
+        <div class="faq-a"><div class="faq-a-inner">ID, proof of address, employment contract (or equivalent), your last 3 payslips (or proof of income) and your latest tax notice. The same documents are required for the guarantor. Bank details (RIB) are only requested if you choose to pay by direct debit. Our team helps you put the application together.</div></div>
       </div>
 
     </div>
@@ -1752,8 +1709,8 @@
     <!-- Colonne gauche : texte + contact direct -->
     <div class="cta-left">
       <div class="section-tag">Contact</div>
-      <h2>Trouvez votre <em>prochain logement</em> à Limoges</h2>
-      <p>Begip vous recontacte rapidement avec les biens disponibles correspondant à vos critères. Type de logement, quartier, budget, date d'emménagement : dites-nous tout, nous nous occupons du reste.</p>
+      <h2>Find your <em>next home</em> in Limoges</h2>
+      <p>Begip gets back to you quickly with available properties matching your criteria. Property type, district, budget, move-in date: tell us everything, we'll handle the rest.</p>
       <div class="cta-direct">
         <a href="tel:0555339750" class="cta-direct-item">
           <span class="cta-direct-icon">📞</span>
@@ -1772,82 +1729,82 @@
 
     <!-- Colonne droite : formulaire -->
     <div class="contact-form-wrap">
-      <div class="form-title">Décrivez votre recherche</div>
+      <div class="form-title">Describe your search</div>
 
       <form action="https://formspree.io/f/xlgagzpy" method="POST" id="contactForm">
-        <input type="hidden" name="_subject" value="Nouveau contact Mon Logement Limoges" />
-        <input type="hidden" name="source_site" value="mon-logement-limoges.fr" />
+        <input type="hidden" name="_subject" value="New contact Mon Logement Limoges (EN)" />
+        <input type="hidden" name="source_site" value="mon-logement-limoges.fr/en" />
 
         <div class="form-row">
           <div class="form-group">
-            <label for="nom">Nom *</label>
-            <input type="text" id="nom" name="nom" required placeholder="Votre nom" />
+            <label for="nom">Last name *</label>
+            <input type="text" id="nom" name="nom" required placeholder="Your last name" />
           </div>
           <div class="form-group">
-            <label for="prenom">Prénom *</label>
-            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" />
+            <label for="prenom">First name *</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Your first name" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="votre@email.fr" />
+            <input type="email" id="email" name="email" required placeholder="you@email.com" />
           </div>
           <div class="form-group">
-            <label for="telephone">Téléphone</label>
+            <label for="telephone">Phone</label>
             <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="type_logement">Type de logement</label>
+            <label for="type_logement">Property type</label>
             <select id="type_logement" name="type_logement">
-              <option value="">Sélectionnez...</option>
-              <option value="T2">Appartement T2</option>
-              <option value="T3">Appartement T3</option>
-              <option value="T4+">T4 et plus</option>
-              <option value="Maison Limoges">Maison à Limoges</option>
-              <option value="Logement Haute-Vienne">Logement Haute-Vienne</option>
+              <option value="">Select…</option>
+              <option value="T2">T2 flat (1 bed)</option>
+              <option value="T3">T3 flat (2 bed)</option>
+              <option value="T4+">T4 and up</option>
+              <option value="Maison Limoges">House in Limoges</option>
+              <option value="Logement Haute-Vienne">Home in the Haute-Vienne</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="budget">Budget mensuel</label>
+            <label for="budget">Monthly budget</label>
             <select id="budget" name="budget">
-              <option value="">Sélectionnez...</option>
-              <option value="< 500€">Moins de 500 €</option>
-              <option value="500-700€">500 – 700 €</option>
-              <option value="700-900€">700 – 900 €</option>
-              <option value="> 900€">Plus de 900 €</option>
+              <option value="">Select…</option>
+              <option value="< 500€">Under €500</option>
+              <option value="500-700€">€500 – €700</option>
+              <option value="700-900€">€700 – €900</option>
+              <option value="> 900€">Over €900</option>
             </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="dispo">Date d'emménagement souhaitée</label>
+          <label for="dispo">Preferred move-in date</label>
           <select id="dispo" name="dispo">
-            <option value="">Sélectionnez...</option>
-            <option value="Immédiatement">Immédiatement</option>
-            <option value="Dans 1 mois">Dans 1 mois</option>
-            <option value="Dans 2-3 mois">Dans 2 – 3 mois</option>
-            <option value="Dans 6 mois ou +">Dans 6 mois ou plus</option>
+            <option value="">Select…</option>
+            <option value="Immédiatement">Immediately</option>
+            <option value="Dans 1 mois">Within 1 month</option>
+            <option value="Dans 2-3 mois">In 2–3 months</option>
+            <option value="Dans 6 mois ou +">In 6 months or more</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="message">Message (quartier souhaité, situation, questions…)</label>
-          <textarea id="message" name="message" placeholder="Décrivez votre situation, vos critères, vos questions…"></textarea>
+          <label for="message">Message (preferred district, situation, questions…)</label>
+          <textarea id="message" name="message" placeholder="Describe your situation, your criteria, your questions…"></textarea>
         </div>
 
-        <button type="submit" class="form-submit" id="submitBtn">Envoyer ma demande</button>
-        <p class="form-note">Vos données sont traitées par Begip uniquement pour répondre à votre demande. Aucun démarchage.</p>
+        <button type="submit" class="form-submit" id="submitBtn">Send my enquiry</button>
+        <p class="form-note">Your data is used by Begip only to answer your enquiry. No cold-calling.</p>
       </form>
 
       <div class="form-success" id="formSuccess">
         <div class="success-icon">✓</div>
-        <h3>Message envoyé !</h3>
-        <p>Begip reviendra vers vous rapidement — généralement sous 24 h.</p>
+        <h3>Message sent!</h3>
+        <p>Begip will get back to you quickly — usually within 24 hours.</p>
       </div>
     </div>
 
@@ -1860,24 +1817,24 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo"><span>mon-logement</span><em>limoges</em><span>.fr</span></div>
-        <p>Le site Begip dédié à la location d'appartements et de maisons à Limoges et en Haute-Vienne. Une agence locale, plus de 35 ans d'expérience, un parc varié.</p>
+        <p>The Begip site dedicated to renting flats and houses in Limoges and the Haute-Vienne. A local agency, over 35 years of experience, a varied portfolio.</p>
       </div>
       <div class="footer-col">
-        <h4>Logements</h4>
+        <h4>Homes</h4>
         <ul>
-          <li><a href="location-t2-limoges">Appartements T2</a></li>
-          <li><a href="location-t3-limoges">Appartements T3</a></li>
-          <li><a href="#types">T4 et plus</a></li>
-          <li><a href="#types">Maisons</a></li>
+          <li><a href="/en/location-t2-limoges">T2 flats</a></li>
+          <li><a href="/en/location-t3-limoges">T3 flats</a></li>
+          <li><a href="#types">T4 and up</a></li>
+          <li><a href="#types">Houses</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Réseau Begip</h4>
+        <h4>Begip network</h4>
         <ul>
-          <li><a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer">Studio Limoges ↗</a></li>
-          <li><a href="https://www.vanteaux-limoges.fr" target="_blank" rel="noopener noreferrer">Vanteaux Limoges ↗</a></li>
-          <li><a href="https://www.emagine-residence.fr" target="_blank" rel="noopener noreferrer">Emagine Résidence ↗</a></li>
-          <li><a href="https://www.residenceetudiantelimoges.fr" target="_blank" rel="noopener noreferrer">Résidence Étudiante ↗</a></li>
+          <li><a href="https://www.studio-limoges.fr/en" target="_blank" rel="noopener noreferrer">Studio Limoges ↗</a></li>
+          <li><a href="https://www.vanteaux-limoges.fr/en" target="_blank" rel="noopener noreferrer">Vanteaux Limoges ↗</a></li>
+          <li><a href="https://www.emagine-residence.fr/en" target="_blank" rel="noopener noreferrer">Emagine Résidence ↗</a></li>
+          <li><a href="https://www.residenceetudiantelimoges.fr/en" target="_blank" rel="noopener noreferrer">Student Residence ↗</a></li>
           <li><a href="https://www.university-dutreix.fr" target="_blank" rel="noopener noreferrer">University Dutreix ↗</a></li>
           <li><a href="https://www.university-meissonier.fr" target="_blank" rel="noopener noreferrer">University Meissonier ↗</a></li>
           <li><a href="https://begip.fr" target="_blank" rel="noopener noreferrer">Begip ↗</a></li>
@@ -1886,15 +1843,15 @@
       <div class="footer-col">
         <h4>Guides</h4>
         <ul>
-          <li><a href="quartiers-loger-limoges">Quartiers de Limoges</a></li>
-          <li><a href="aides-logement-limoges">Aides au logement</a></li>
-          <li><a href="#faq">Questions fréquentes</a></li>
-          <li><a href="#contact">Nous contacter</a></li>
-          <li><a href="mentions-legales">Mentions légales</a></li>
+          <li><a href="/en/quartiers-loger-limoges">Limoges districts</a></li>
+          <li><a href="/en/aides-logement-limoges">Housing benefit</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="/mentions-legales">Legal notice</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-copy">© 2026 mon-logement-limoges.fr · Un site du réseau Begip Limoges · plus de 35 ans d'expérience locale</div>
+    <div class="footer-copy">© 2026 mon-logement-limoges.fr · A site in the Begip Limoges network · over 35 years of local experience</div>
   </div>
 </footer>
 
@@ -1938,7 +1895,7 @@
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Envoi en cours…';
+      submitBtn.textContent = 'Sending…';
       // ── Double-envoi : Google Sheets (suivi des leads) en parallèle ──
       const encoded = new URLSearchParams(new FormData(contactForm)).toString();
       fetch('https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec', {
@@ -1957,13 +1914,13 @@
           formSuccess.style.display = 'block';
         } else {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Envoyer ma demande';
-          alert('Une erreur est survenue. Merci de nous contacter par téléphone ou email.');
+          submitBtn.textContent = 'Send my enquiry';
+          alert('Something went wrong. Please contact us by phone or email.');
         }
       } catch {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Envoyer ma demande';
-        alert('Erreur réseau. Merci de nous contacter directement.');
+        submitBtn.textContent = 'Send my enquiry';
+        alert('Network error. Please contact us directly.');
       }
     });
   }
@@ -1990,40 +1947,5 @@
   }
 </script>
 
-<script>
-(function(){
-  /* ═══ DISPOS DU MOMENT — modifier UNIQUEMENT ces chiffres quand un bien est loué ═══ */
-  var DISPO = { t2: 5, t3: 2, t4: 1, maison: 0 };
-  /* ══════════════════════════════════════════════════════════════════════════════ */
-
-  // Compteurs rouges sur les 4 cartes « Que cherchez-vous ? »
-  document.querySelectorAll('.type-dispo').forEach(function(el){
-    var n = DISPO[el.getAttribute('data-type')] || 0;
-    if(n > 0){
-      el.textContent = n + (n>1 ? ' disponibles' : ' disponible');
-    } else {
-      el.textContent = 'Aucune dispo actuellement';
-      el.classList.add('none');
-    }
-  });
-
-  // Bandeau : date du jour + messages qui tournent
-  var dt=document.querySelector('.hero-announce .ann-date');
-  if(dt){ dt.textContent=new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }
-  var msg=document.querySelector('.hero-announce .ann-msg');
-  if(!msg) return;
-  var totalApp = DISPO.t2 + DISPO.t3 + DISPO.t4;
-  var messages=[
-    (totalApp>0 ? totalApp + ' appartements encore disponibles — ' + DISPO.t2 + ' T2, ' + DISPO.t3 + ' T3 et ' + DISPO.t4 + ' T4' : 'Nouvelles disponibilités très bientôt'),
-    'Contactez Begip au <a href="tel:0555339750">05&nbsp;55&nbsp;33&nbsp;97&nbsp;50</a> · <a href="mailto:agence@begip.fr">agence@begip.fr</a>'
-  ];
-  var i=0;
-  msg.innerHTML=messages[0];
-  setInterval(function(){
-    msg.style.opacity='0';
-    setTimeout(function(){ i=(i+1)%messages.length; msg.innerHTML=messages[i]; msg.style.opacity='1'; }, 500);
-  }, 4500);
-})();
-</script>
 </body>
 </html>
