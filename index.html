@@ -1296,7 +1296,7 @@
           <span class="type-sub">3 pièces · petites familles</span>
           <span class="type-dispo" data-type="t3"></span>
         </a>
-        <a href="t4-mauvendiere-limoges" class="type-card">
+        <a href="#contact" class="type-card">
           <span class="type-name">T4 et +</span>
           <span class="type-sub">Grands appartements</span>
           <span class="type-dispo" data-type="t4"></span>
@@ -1372,21 +1372,21 @@
         </div>
       </a>
 
-      <!-- T4 — annonce disponible (rue de la Mauvendière) -->
-      <a href="t4-mauvendiere-limoges" class="logement-card">
+      <!-- T4 et + — catégorie -->
+      <a href="#contact" class="logement-card">
         <div class="logement-header">
-          <div class="logement-num">Disponible de suite</div>
-          <h3 class="logement-name">T4 — rue de la Mauvendière</h3>
-          <div class="logement-tagline">92,80 m² · 3 chambres-suites · 993 €/mois CC</div>
+          <div class="logement-num">N° 03</div>
+          <h3 class="logement-name">Grands appartements (T4 et +)</h3>
+          <div class="logement-tagline">Pour les familles et les colocations</div>
         </div>
         <div class="logement-body">
-          <p class="logement-desc">Notre T4 actuellement disponible : entièrement rénové, avec <strong>3 chambres disposant chacune de sa salle d'eau et de son WC privatifs</strong> — une configuration rare, idéale pour une colocation ou une famille. Cuisine aménagée, balcon, fibre.</p>
+          <p class="logement-desc">Grands appartements pour familles ou colocations : plusieurs chambres, séjours spacieux, souvent dans des immeubles de caractère rénovés. Les disponibilités tournent vite — dites-nous votre recherche, nous vous prévenons dès qu'un bien se libère.</p>
           <ul class="logement-features">
-            <li>3 salles d'eau privatives</li>
-            <li>Balcon, parquet, très lumineux</li>
-            <li>Disponible immédiatement</li>
+            <li>Idéal familles &amp; colocations</li>
+            <li>Immeubles de caractère rénovés</li>
+            <li>Disponibilités sur demande</li>
           </ul>
-          <span class="logement-link">Voir l'annonce →</span>
+          <span class="logement-link">Nous contacter →</span>
         </div>
       </a>
 
@@ -1993,7 +1993,7 @@
 <script>
 (function(){
   /* ═══ DISPOS DU MOMENT — modifier UNIQUEMENT ces chiffres quand un bien est loué ═══ */
-  var DISPO = { t2: 5, t3: 2, t4: 1, maison: 0 };
+  var DISPO = { t2: 8, t3: 4, t4: 0, maison: 0 };
   /* ══════════════════════════════════════════════════════════════════════════════ */
 
   // Compteurs rouges sur les 4 cartes « Que cherchez-vous ? »
@@ -2013,8 +2013,14 @@
   var msg=document.querySelector('.hero-announce .ann-msg');
   if(!msg) return;
   var totalApp = DISPO.t2 + DISPO.t3 + DISPO.t4;
+  var parts=[];
+  if(DISPO.t2>0) parts.push(DISPO.t2+' T2');
+  if(DISPO.t3>0) parts.push(DISPO.t3+' T3');
+  if(DISPO.t4>0) parts.push(DISPO.t4+' T4');
+  var breakdown = parts.length>1 ? parts.slice(0,-1).join(', ')+' et '+parts[parts.length-1] : parts.join('');
+  var appWord = totalApp>1 ? ' appartements encore disponibles' : ' appartement encore disponible';
   var messages=[
-    (totalApp>0 ? totalApp + ' appartements encore disponibles — ' + DISPO.t2 + ' T2, ' + DISPO.t3 + ' T3 et ' + DISPO.t4 + ' T4' : 'Nouvelles disponibilités très bientôt'),
+    (totalApp>0 ? totalApp + appWord + (breakdown ? ' — '+breakdown : '') : 'Nouvelles disponibilités très bientôt'),
     'Contactez Begip au <a href="tel:0555339750">05&nbsp;55&nbsp;33&nbsp;97&nbsp;50</a> · <a href="mailto:agence@begip.fr">agence@begip.fr</a>'
   ];
   var i=0;
